@@ -20,3 +20,18 @@ $secondary: rgb(193, 190, 190);
 .wd-washed-out {
   filter: contrast(30%) brightness(150%);
 }
+
+// Kanbas Navigation
+
+.kanbas-navigation-sidebar {
+  width: 80px;
+}
+
+.kanbas-navigation-sidebar .nav-link {
+  padding: 6 0 6 0;
+  font-size: small;
+}
+
+.kanbas-navigation-sidebar .nav-link img {
+  max-width: 80%;
+}
