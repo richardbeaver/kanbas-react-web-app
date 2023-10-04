@@ -1,0 +1,22 @@
+// Bootstrap color overrides
+$primary: red;
+$secondary: rgb(193, 190, 190);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Bootstrap CSS overrides
+
+
+// Custom CSS rules
+
+.wd-icon-primary {
+  color: var(--primary);
+}
+
+.wd-icon-success {
+  color: var(--success);
+}
+
+.wd-washed-out {
+  filter: contrast(30%) brightness(150%);
+}
