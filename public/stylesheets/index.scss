@@ -2,19 +2,26 @@
 $primary: red;
 $secondary: rgb(193, 190, 190);
 
+// Add a 5% position value
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%,
+  5: 5%,
+);
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
-// Bootstrap CSS overrides
-
 
 // Custom CSS rules
 
+// Icons
+
 .wd-icon-primary {
-  color: var(--primary);
+  color: $primary;
 }
 
 .wd-icon-success {
-  color: var(--success);
+  color: $success;
 }
 
 .wd-washed-out {
@@ -34,4 +41,10 @@ $secondary: rgb(193, 190, 190);
 
 .kanbas-navigation-sidebar .nav-link img {
   max-width: 80%;
+}
+
+// Dashboard
+
+.dashboard .card-header {
+  height: 100px;
 }

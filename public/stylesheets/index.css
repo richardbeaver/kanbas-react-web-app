@@ -7386,6 +7386,10 @@ textarea.form-control-lg {
   top: 100% !important;
 }
 
+.top-5 {
+  top: 5% !important;
+}
+
 .bottom-0 {
   bottom: 0 !important;
 }
@@ -7396,6 +7400,10 @@ textarea.form-control-lg {
 
 .bottom-100 {
   bottom: 100% !important;
+}
+
+.bottom-5 {
+  bottom: 5% !important;
 }
 
 .start-0 {
@@ -7410,6 +7418,10 @@ textarea.form-control-lg {
   left: 100% !important;
 }
 
+.start-5 {
+  left: 5% !important;
+}
+
 .end-0 {
   right: 0 !important;
 }
@@ -7420,6 +7432,10 @@ textarea.form-control-lg {
 
 .end-100 {
   right: 100% !important;
+}
+
+.end-5 {
+  right: 5% !important;
 }
 
 .translate-middle {
@@ -11977,13 +11993,30 @@ textarea.form-control-lg {
   }
 }
 .wd-icon-primary {
-  color: var(--primary);
+  color: red;
 }
 
 .wd-icon-success {
-  color: var(--success);
+  color: #198754;
 }
 
 .wd-washed-out {
   filter: contrast(30%) brightness(150%);
+}
+
+.kanbas-navigation-sidebar {
+  width: 80px;
+}
+
+.kanbas-navigation-sidebar .nav-link {
+  padding: 6 0 6 0;
+  font-size: small;
+}
+
+.kanbas-navigation-sidebar .nav-link img {
+  max-width: 80%;
+}
+
+.dashboard .card-header {
+  height: 100px;
 }/*# sourceMappingURL=index.css.map */
