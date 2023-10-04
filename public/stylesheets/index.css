@@ -11992,6 +11992,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.btn-primary {
+  color: white;
+}
+
 .wd-icon-primary {
   color: red;
 }
@@ -12004,13 +12008,24 @@ textarea.form-control-lg {
   filter: contrast(30%) brightness(150%);
 }
 
+.account-navigation-sidebar .list-group-item {
+  border: none;
+}
+
 .kanbas-navigation-sidebar {
   width: 80px;
 }
 
 .kanbas-navigation-sidebar .nav-link {
+  color: white;
   padding: 6 0 6 0;
   font-size: small;
+  border-radius: 0;
+}
+
+.kanbas-navigation-sidebar .nav-link.active {
+  color: red;
+  background-color: white;
 }
 
 .kanbas-navigation-sidebar .nav-link img {
@@ -12019,4 +12034,24 @@ textarea.form-control-lg {
 
 .dashboard .card-header {
   height: 100px;
+}
+
+.course-content ul,
+.assignments-page ul {
+  border-radius: 0;
+}
+
+.course-content .list-group .row {
+  min-height: 40px;
+  padding: 5 5 5 5;
+  border: 1px solid rgb(193, 190, 190);
+}
+
+.assignments-page .list-group .row {
+  min-height: 40px;
+  padding: 5 5 5 5;
+}
+
+.course-additional-info .list-group-item {
+  border-radius: 0;
 }/*# sourceMappingURL=index.css.map */

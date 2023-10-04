@@ -13,12 +13,16 @@
   <div class="row">
 
     <div class="course-content col">
+
       <div class="btn-toolbar justify-content-end">
         <button type="button" class="btn btn-secondary me-1">Collapse All</button>
         <button type="button" class="btn btn-secondary me-1">View Progress</button>
 
         <div title="publishing-dropdown-button" class="btn-group me-1">
-          <button type="button" class="btn btn-secondary">Publish All</button>
+          <button type="button" class="btn btn-secondary">
+            <i class="fa-regular fa-circle-check wd-icon-success pe-1"></i>
+            Publish All
+          </button>
           <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
             data-bs-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle Dropdown</span>
@@ -30,114 +34,367 @@
           </ul>
         </div>
 
-        <button type="button" class="btn btn-secondary">Module</button>
+        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-plus"></i>
+          Module
+        </button>
+
+        <button type="button" class="btn btn-secondary ms-1">
+          <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+        </button>
       </div>
 
-      <ul title="weeks" class="list-group">
+      <hr>
 
-        <li title="week-00" class="list-group-item">
-          WEEK 0 - INTRO
+      <ul title="list-of-weeks" class="list-group">
+        <!-- Each list group item is one week of content -->
 
-          <ul title="resources" class="list-group">
-            <li title="learning-objectives" class="list-group-item">
-              LEARNING OBJECTIVES
-              <ul class="list-group">
-                <li class="list-group-item">Introduction to the course</li>
-                <li class="list-group-item">Learn what is Web Development</li>
-                <li class="list-group-item">Creating a development environment</li>
-                <li class="list-group-item">Creating a Web Application</li>
-                <li class="list-group-item">Getting started with the 1st assignment</li>
-              </ul>
-            </li>
+        <!-- Week 0 Title -->
+        <div class="row bg-secondary align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold">Week 0 - INTRO</span>
+          </div>
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn ms-2">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
 
-            <li title="reading" class="list-group-item">
-              READING
-              <ul class="list-group">
-                <li class="list-group-item">Full Stack Developer - Chapter 1 - Introduction</li>
-                <li class="list-group-item">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-              </ul>
-            </li>
+        <!-- Learning Objectives -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold">LEARNING OBJECTIVES</span>
+          </div>
 
-            <li title="slides" class="list-group-item">
-              SLIDES
-              <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">
-                  Introduction to Web Development Links to an external site.
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  Creating an HTTP server with Node.js Links to an external site.
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  Creating a React Application Links to an external site.
-                </a>
-              </div>
-            </li>
-          </ul>
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
 
-        </li>
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold ps-5">Introduction to the course</span>
+          </div>
 
-        <li title="week-01" class="list-group-item">
-          WEEK 1 - HTML
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
 
-          <ul title="resources" class="list-group">
-            <li title="learning-objectives" class="list-group-item">
-              LEARNING OBJECTIVES
-              <ul class="list-group">
-                <li class="list-group-item">Learn how to create user interfaces with HTML</li>
-                <li class="list-group-item">Keep working on assignment 1</li>
-                <li class="list-group-item">Deploy the assignment to Netlify</li>
-              </ul>
-            </li>
 
-            <li title="reading" class="list-group-item">
-              READING
-              <ul class="list-group">
-                <li class="list-group-item">Full Stack Developer - Chapter 1 - Introduction</li>
-                <li class="list-group-item">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-              </ul>
-            </li>
 
-            <li title="slides" class="list-group-item">
-              SLIDES
-              <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">
-                  Introduction to HTML and the DOM Links to an external site.
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  Formatting Web content with Headings and Paragraphs Links to an external site.
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  Formatting content with Lists and Tables Links to an external site.
-                </a>
-              </div>
-            </li>
-          </ul>
-        </li>
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold ps-5">Learn what is Web Development</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold ps-5">Creating a development environment</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold ps-5">Creating a Web Application</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold ps-5">Getting started with the 1st assignment</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Reading -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold">READING</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold ps-5">Full Stack Developer - Chapter 1 - Introduction</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold ps-5">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slides -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <span class="fw-bold">SLIDES</span>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <div class="col ps-5">
+              <i class="fa-solid fa-link"></i>
+              <a href="#" class="link-underline link-underline-opacity-0">
+                Introduction to Web Development
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <div class="col ps-5">
+              <i class="fa-solid fa-link"></i>
+              <a href="#" class="link-underline link-underline-opacity-0">
+                Creating an HTTP server with Node.js
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="row align-items-center">
+          <div class="col d-flex align-items-center">
+            <button class="btn">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <div class="col ps-5">
+              <i class="fa-solid fa-link"></i>
+              <a href="#" class="link-underline link-underline-opacity-0">
+                Creating a React Application
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="btn-toolbar justify-content-end align-items-center">
+              <i class="fas fa-check-circle wd-icon-success"></i>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </ul>
     </div>
 
 
-    <div class="course-additional-info col">
+    <div class="course-additional-info col-3">
       <h2>Course Status</h2>
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-secondary">Unpublish</button>
-        <button type="button" class="btn btn-success">Published</button>
+      <div class="btn-group mb-3">
+        <button type="button" class="btn btn-secondary">
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small>Unpublish</small>
+        </button>
+        <button type="button" class="btn btn-success wd-washed-out">
+          <i class="fa-solid fa-circle-check"></i>
+          <small>Published</small>
+        </button>
       </div>
 
-      <div class="list-group pt-2">
-        <button type="button" class="list-group-item list-group-item-action">Import Existing Content</button>
-        <button type="button" class="list-group-item list-group-item-action">Import From Commons</button>
-        <button type="button" class="list-group-item list-group-item-action">Choose Home Page</button>
-        <button type="button" class="list-group-item list-group-item-action">View Course Stream</button>
-        <button type="button" class="list-group-item list-group-item-action">New Announcement</button>
-        <button type="button" class="list-group-item list-group-item-action">New Analytics</button>
-        <button type="button" class="list-group-item list-group-item-action">View Course Notifications</button>
+      <div class="btn-toolbar flex-column align-items-between mb-3">
+        <button type="button" class="btn btn-secondary mb-1">
+          <i class="fa-solid fa-file-import"></i>
+          <small>Import Existing Content</small>
+        </button>
+        <button type="button" class="btn btn-secondary mb-1">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <small>Import From Commons</small>
+        </button>
+        <button type="button" class="btn btn-secondary mb-1">
+          <i class="fa-solid fa-circle-dot"></i>
+          <small>Choose Home Page</small>
+        </button>
+        <button type="button" class="btn btn-secondary mb-1">
+          <i class="fa-solid fa-bars-staggered"></i>
+          <small>View Course Stream</small>
+        </button>
+        <button type="button" class="btn btn-secondary mb-1">
+          <i class="fa-solid fa-bullhorn"></i>
+          <small>New Announcement</small>
+        </button>
+        <button type="button" class="btn btn-secondary mb-1">
+          <i class="fa-solid fa-chart-simple"></i>
+          <small>New Analytics</small>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <i class="fa-regular fa-bell"></i>
+          <small>View Course Notifications</small>
+        </button>
       </div>
 
       <div class="row pt-2 d-flex align-items-center">
         <h2 class="col">Coming Up</h2>
-        <a href="#" class="col">View Calendar</a>
+        <div class="col d-flex justify-content-end">
+          <a href="#" class="link-underline link-underline-opacity-0">
+            <i class="fa-regular fa-calendar text-black"></i>
+            View Calendar
+          </a>
+        </div>
+
       </div>
 
       <ul class="list-group">
@@ -145,9 +402,11 @@
           <div class="row">
             <i class="col-1 fa fa-calendar"></i>
             <div class="col">
-              <p class="lh-sm fw-bold text-primary">Lecture</p>
-              <p class="lh-sm">CS4550.12631.202410</p>
-              <p class="lh-sm">Sep 11 at 11:45am</p>
+              <a href="#" class="fw-bold link-underline link-underline-opacity-0">Lecture</a>
+              <div>
+                <small class="lh-sm">CS4550.12631.202410</small>
+                <small class="lh-sm">Sep 11 at 11:45am</small>
+              </div>
             </div>
           </div>
         </li>
@@ -155,9 +414,11 @@
           <div class="row">
             <i class="col-1 fa fa-calendar"></i>
             <div class="col">
-              <p class="lh-sm fw-bold text-primary">CS5610 06 SP23 Lecture</p>
-              <p class="lh-sm">CS4550.12631.202410</p>
-              <p class="lh-sm">Sep 11 at 6pm</p>
+              <a href="#" class="fw-bold link-underline link-underline-opacity-0">CS5610 06 SP23 Lecture</a>
+              <div>
+                <small class="lh-sm">CS4550.12631.202410</small>
+                <small class="lh-sm">Sep 11 at 6pm</small>
+              </div>
             </div>
           </div>
         </li>
@@ -165,9 +426,12 @@
           <div class="row">
             <i class="col-1 fa fa-calendar"></i>
             <div class="col">
-              <p class="lh-sm fw-bold text-primary">CS5610 Web Development Summer 1 2023 - Lecture</p>
-              <p class="lh-sm">CS4550.12631.202410</p>
-              <p class="lh-sm">Sep 11 at 7pm</p>
+              <a href="#" class="fw-bold link-underline link-underline-opacity-0">CS5610 Web Development Summer 1 2023 -
+                Lecture</a>
+              <div>
+                <small class="lh-sm">CS4550.12631.202410</small>
+                <small class="lh-sm">Sep 11 at 7pm</small>
+              </div>
             </div>
           </div>
         </li>

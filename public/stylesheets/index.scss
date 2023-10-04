@@ -14,7 +14,11 @@ $position-values: (
 
 // Custom CSS rules
 
-// Icons
+// Icons and Colors
+
+.btn-primary {
+  color: white;
+}
 
 .wd-icon-primary {
   color: $primary;
@@ -28,6 +32,12 @@ $position-values: (
   filter: contrast(30%) brightness(150%);
 }
 
+// Account Navigation
+
+.account-navigation-sidebar .list-group-item {
+  border: none;
+}
+
 // Kanbas Navigation
 
 .kanbas-navigation-sidebar {
@@ -35,8 +45,15 @@ $position-values: (
 }
 
 .kanbas-navigation-sidebar .nav-link {
+  color: white;
   padding: 6 0 6 0;
   font-size: small;
+  border-radius: 0;
+}
+
+.kanbas-navigation-sidebar .nav-link.active {
+  color: $primary;
+  background-color: white;
 }
 
 .kanbas-navigation-sidebar .nav-link img {
@@ -47,4 +64,28 @@ $position-values: (
 
 .dashboard .card-header {
   height: 100px;
+}
+
+// Course Home Page
+
+.course-content ul,
+.assignments-page ul {
+  border-radius: 0;
+}
+
+.course-content .list-group .row {
+  min-height: 40px;
+  padding: 5 5 5 5;
+  border: 1px solid $secondary;
+}
+
+.assignments-page .list-group .row {
+  min-height: 40px;
+  padding: 5 5 5 5;
+}
+
+
+
+.course-additional-info .list-group-item {
+  border-radius: 0;
 }

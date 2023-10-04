@@ -7,8 +7,19 @@
 <div class="container-fluid">
 
   <div class="profile-edit-page">
-    <div>
-      <img src="/images/blank-profile-photo.jpg" class="img-fluid col-3 rounded-circle" alt="blank profile photo">
+    <div class="row">
+      <div class="col">
+        <img src="/images/blank-profile-photo.jpg" class="img-fluid rounded-circle col-6 col-sm-7 col-md-6 col-lg-5"
+          alt="blank profile photo">
+      </div>
+      <div class="col">
+        <div class="btn-toolbar justify-content-end">
+          <a href="index.html" class="btn btn-secondary" role="button">
+            <i class="fa-solid fa-pencil fa-flip-horizontal"></i>
+            Cancel Editing
+          </a>
+        </div>
+      </div>
     </div>
 
     <form>
@@ -44,20 +55,34 @@
       <div class="form-group">
         <h2>Links</h2>
 
-        <div class="row align-items-end">
-          <div class="form-group col">
-            <label for="input-title-1">Title</label>
-            <input type="text" class="form-control" id="input-title-1" value="YouTube">
+        <div class="row align-items-end pb-2">
+          <div class="col">
+            <div class="row align-items-end">
+              <div class="col">
+                <div class="form-group">
+                  <label for="input-title-1">Title</label>
+                  <input type="text" class="form-control" id="input-title-1" value="YouTube">
+                </div>
+              </div>
+              <div class="col-2">
+                <i class="fa-solid fa-arrow-right fa-2x"></i>
+              </div>
+            </div>
           </div>
-          <div class="form-group col-1">
-            <a href="#">{Arrow symbol here}</a>
-          </div>
-          <div class="form-group col">
-            <label for="input-url-1">URL</label>
-            <input type="text" class="form-control" id="input-url-1" value="https://www.youtube.com/@WebDevTV">
-          </div>
-          <div class="form-group col-1">
-            <a href="#">{X symbol here}</a>
+          <div class="col">
+            <div class="row align-items-end">
+              <div class="col">
+                <div class="form-group">
+                  <label for="input-url-1">URL</label>
+                  <input type="text" class="form-control" id="input-url-1" value="https://www.youtube.com/@WebDevTV">
+                </div>
+              </div>
+              <div class="col-2 me-2">
+                <button class="btn text-primary">
+                  <i class="fa-solid fa-x fa-2x"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -68,8 +93,9 @@
 
       <div class="form-group btn-toolbar justify-content-end">
         <a href="index.html" class="btn btn-secondary" role="button">Cancel</a>
-        <a href="index.html" class="btn btn-primary" role="button">Save Profile</a>
+        <a href="index.html" class="btn btn-primary text-white ms-1" role="button">Save Profile</a>
       </div>
     </form>
   </div>
+
 </div>
