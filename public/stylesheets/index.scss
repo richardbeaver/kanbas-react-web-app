@@ -36,6 +36,13 @@ $position-values: (
 
 .account-navigation-sidebar .list-group-item {
   border: none;
+  color: $primary;
+}
+
+.account-navigation-sidebar .list-group-item.active {
+  color: black;
+  background-color: white;
+  border-left: 3px solid black;
 }
 
 // Kanbas Navigation

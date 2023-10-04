@@ -1,0 +1,310 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="/stylesheets/index.css">
+
+<!--  -->
+<!--  -->
+
+<div class="row">
+
+  <div class="col-1">
+    <div class="kanbas-navigation-sidebar d-none d-sm-flex flex-column bg-black">
+      <img src="/images/kanbas-navbar-nu-logo.jpg" alt="">
+
+      <ul class="nav nav-pills flex-column text-center">
+        <li>
+          <a href="/kanbas/profile/index.html" class="nav-link ">
+            <img class="img-fluid rounded-circle" src="/images/blank-profile-photo.jpg" alt="">
+            Account
+          </a>
+        </li>
+        <li>
+          <a href="/kanbas/dashboard.html" class="nav-link active">
+            <i class="fas fa-tachometer-alt fa-2x d-block wd-icon-primary"></i>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="/kanbas/course-navigation.html" class="nav-link ">
+            <i class="fa-solid fa-book fa-2x d-block wd-icon-primary"></i>
+            Courses
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-regular fa-calendar-days fa-2x d-block wd-icon-primary"></i>
+            Calendar
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-solid fa-inbox fa-2x d-block wd-icon-primary"></i>
+            Inbox
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-regular fa-clock fa-2x d-block wd-icon-primary"></i>
+            History
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-solid fa-tv fa-2x d-block wd-icon-primary"></i>
+            Studio
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <div class="fa-stack wd-icon-primary">
+              <i class="fa-solid fa-c fa-stack-2x"></i>
+              <i class="fa-solid fa-arrow-right fa-stack-1x"></i>
+            </div><br>
+            Commons
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fas fa-question-circle fa-2x d-block wd-icon-primary"></i>
+            Help
+          </a>
+        </li>
+    </div>
+  </div>
+
+  <div class="col-1 d-md-none"></div>
+
+  <div class="col-sm-10 ps-4">
+    <div class="container-fluid">
+
+      <div class="nav-bar-dashboard">
+        <h1 class="display-5 text-left">Dashboard</h1>
+      </div>
+
+      <hr>
+
+      <div class="dashboard">
+        <div class="container-fluid">
+          <h4>Published Courses (8)</h4>
+
+          <hr>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-secondary">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-secondary">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-primary">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-primary">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-info">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-info">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-success">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-success">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-info">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-info">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-primary">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-primary">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-success">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-success">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col">
+              <!-- Relative positioning so that the button sits "on top of" the card
+              and does not link to the card's href when clicked -->
+              <div class="position-relative">
+                <a href="/kanbas/home.html" class="text-decoration-none">
+                  <div class="card">
+                    <div class="card-header bg-secondary">
+                    </div>
+                    <div class="card-body pt-2 pb-2">
+                      <h5 class="card-title text-secondary">Course Name</h5>
+                      <p class="card-text mb-0">Course Code</p>
+                      <p class="card-text mb-2">Term Code</p>
+                      <i class="fa-solid fa-book"></i>
+                    </div>
+                  </div>
+                </a>
+                <!-- Added "5%" to Bootstrap $position-values Sass map to use here -->
+                <div class="btn-toolbar justify-content-end position-absolute top-5 end-5">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-ellipsis fa-rotate-90" style="color: white"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

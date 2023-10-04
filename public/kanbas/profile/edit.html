@@ -1,124 +1,222 @@
-<table width="100%">
-  <tbody>
-    <tr valign="top">
-      <td name="kanbas-navigation-sidebar">
-        <ul>
-          <li>
-            <a href="/kanbas/account.html">Account</a>
-          </li>
-          <li>
-            <a href="#">Dashboard</a>
-          </li>
-          <li>
-            <a href="/kanbas/course-navigation.html">Courses</a>
-          </li>
-          <li>
-            <a href="#">Calendar</a>
-          </li>
-          <li>
-            <a href="#">Inbox</a>
-          </li>
-          <li>
-            <a href="#">History</a>
-          </li>
-          <li>
-            <a href="#">Studio</a>
-          </li>
-          <li>
-            <a href="#">Commons</a>
-          </li>
-          <li>
-            <a href="#">Help</a>
-          </li>
-        </ul>
-      </td>
-      <td name="account-navigation-sidebar">
-        <ul>
-          <li>
-            <a href="#">Notifications</a>
-          </li>
-          <li>
-            <a href="/kanbas/profile">Profile</a>
-          </li>
-          <li>
-            <a href="#">Files</a>
-          </li>
-          <li>
-            <a href="#">Settings</a>
-          </li>
-          <li>
-            <a href="#">ePortfolios</a>
-          </li>
-          <li>
-            <a href="#">The Hub</a>
-          </li>
-          <li>
-            <a href="#">Qwickly Course Tools</a>
-          </li>
-          <li>
-            <a href="#">Global Announcements</a>
-          </li>
-        </ul>
-      </td>
-      <td name="edit-profile">
-        <h2>Jose Annunziato</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="/stylesheets/index.css">
 
-        <label for="input-name">Name:*</label>
-        <input type="text" value="Jose Annunziato">
+<!--  -->
+<!--  -->
 
-        <label for="select-pronouns">Pronouns:</label>
-        <select name="select-pronouns" id="select-pronouns">
-          <option value="none">None</option>
-        </select>
+<div class="row">
 
-        <br />
-        <br />
+  <div class="col-0 col-sm-1 me-4 me-md-1 me-lg-0">
+    <div class="kanbas-navigation-sidebar d-none d-sm-flex flex-column bg-black">
+      <img src="/images/kanbas-navbar-nu-logo.jpg" alt="">
 
-        <label for="input-title">Title:</label>
-        <input type="text">
+      <ul class="nav nav-pills flex-column text-center">
+        <li>
+          <a href="/kanbas/profile/index.html" class="nav-link ">
+            <img class="img-fluid rounded-circle" src="/images/blank-profile-photo.jpg" alt="">
+            Account
+          </a>
+        </li>
+        <li>
+          <a href="/kanbas/dashboard.html" class="nav-link">
+            <i class="fas fa-tachometer-alt fa-2x d-block wd-icon-primary"></i>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="/kanbas/course-navigation.html" class="nav-link ">
+            <i class="fa-solid fa-book fa-2x d-block wd-icon-primary"></i>
+            Courses
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-regular fa-calendar-days fa-2x d-block wd-icon-primary"></i>
+            Calendar
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-solid fa-inbox fa-2x d-block wd-icon-primary"></i>
+            Inbox
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-regular fa-clock fa-2x d-block wd-icon-primary"></i>
+            History
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-solid fa-tv fa-2x d-block wd-icon-primary"></i>
+            Studio
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <div class="fa-stack wd-icon-primary">
+              <i class="fa-solid fa-c fa-stack-2x"></i>
+              <i class="fa-solid fa-arrow-right fa-stack-1x"></i>
+            </div><br>
+            Commons
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fas fa-question-circle fa-2x d-block wd-icon-primary"></i>
+            Help
+          </a>
+        </li>
+    </div>
+  </div>
 
-        <h3>Contact</h3>
-        <p>No registered services. You can add some on the <a href="#">settings</a> page.</p>
+  <div class="col ps-4">
 
-        <h3>Biography</h3>
-        <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
-        <textarea cols="50" rows="5">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+    <!-- Page content here -->
 
-        <h3>Links</h3>
-        <a href="https://www.youtube.com/@WebDevTV">YouTube</a>
+    <div class="nav-bar-assignments-edit">
+      <div class="row pt-3">
+        <div class="col-1">
+          <a href="#">
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </a>
+        </div>
+        <div class="col">
+          <h4>Jose Annunziato's Profile</h4>
+        </div>
+      </div>
+    </div>
 
-        <br />
-        <br />
+    <hr class="me-4">
 
-        <table name="new-links">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>URL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <td>
-              <input type="text" value="YouTube">
-            </td>
-            <td>
-              <input type="text" value="https://www.youtube.com/@WebDevTV">
-            </td>
-            <td>
-              <a href="#">Remove</a>
-            </td>
-          </tbody>
-        </table>
+    <div class="row">
+      <div class="col-3">
+        <div class="account-navigation-sidebar list-group">
+          <a href="#" class="list-group-item list-group-item-action">
+            Notifications
+          </a>
+          <a href="/kanbas/profile" class="list-group-item list-group-item-action active">
+            Profile
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Files
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Settings
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            ePortfolios
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Shared Content
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            The Hub
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Qwickly Course Tools
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Global Announcements
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="profile-edit-page">
+          <div class="row">
+            <div class="col">
+              <img src="/images/blank-profile-photo.jpg"
+                class="img-fluid rounded-circle col-6 col-sm-7 col-md-6 col-lg-5" alt="blank profile photo">
+            </div>
+            <div class="col-3">
+              <div class="btn-toolbar justify-content-end">
+                <a href="index.html" class="btn btn-secondary" role="button">
+                  <i class="fa-solid fa-pencil fa-flip-horizontal"></i>
+                  Cancel Editing
+                </a>
+              </div>
+            </div>
+          </div>
 
-        <br />
+          <form>
+            <div class="form-group">
+              <label for="input-name">Name:*</label>
+              <input type="text" id="input-name" class="form-control" value="Jose Annunziato">
+            </div>
+            <div class="form-group">
+              <label for="select-pronouns">Pronouns:</label>
+              <select id="select-pronouns" class="form-control">
+                <option selected>None...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="input-title">Title:</label>
+              <input type="text" id="input-title" class="form-control">
+            </div>
 
-        <a href="index.html">
-          <button>Cancel</button>
-        </a>
-        <a href="index.html">
-          <button>Save Profile</button>
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+            <div class="form-group">
+              <h2>Contact</h2>
+              <p>No registered services. You can add some on the <a href="#">settings</a> page.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="textarea-bio">
+                <h2>Biography</h2>
+              </label>
+              <textarea class="form-control" id="textarea-bio"
+                rows="3">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+            </div>
+
+            <div class="form-group">
+              <h2>Links</h2>
+
+              <div class="row align-items-end pb-2">
+                <div class="col">
+                  <div class="row align-items-end">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="input-title-1">Title</label>
+                        <input type="text" class="form-control" id="input-title-1" value="YouTube">
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <i class="fa-solid fa-arrow-right fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row align-items-end">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="input-url-1">URL</label>
+                        <input type="text" class="form-control" id="input-url-1"
+                          value="https://www.youtube.com/@WebDevTV">
+                      </div>
+                    </div>
+                    <div class="col-2 me-2">
+                      <button class="btn text-primary">
+                        <i class="fa-solid fa-x fa-2x"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-secondary">Add another link</button>
+            </div>
+
+            <hr />
+
+            <div class="form-group btn-toolbar justify-content-end">
+              <a href="index.html" class="btn btn-secondary" role="button">Cancel</a>
+              <a href="index.html" class="btn btn-primary text-white ms-1" role="button">Save Profile</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+</div>

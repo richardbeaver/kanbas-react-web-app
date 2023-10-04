@@ -12010,6 +12010,13 @@ textarea.form-control-lg {
 
 .account-navigation-sidebar .list-group-item {
   border: none;
+  color: red;
+}
+
+.account-navigation-sidebar .list-group-item.active {
+  color: black;
+  background-color: white;
+  border-left: 3px solid black;
 }
 
 .kanbas-navigation-sidebar {
