@@ -1,216 +1,595 @@
-<table width="100%">
-  <tbody>
-    <tr valign="top">
-      <td name="kanbas-navigation-sidebar">
-        <ul>
-          <li>
-            <a href="/kanbas/account.html">Account</a>
-          </li>
-          <li>
-            <a href="#">Dashboard</a>
-          </li>
-          <li>
-            <a href="/kanbas/course-navigation.html">Courses</a>
-          </li>
-          <li>
-            <a href="#">Calendar</a>
-          </li>
-          <li>
-            <a href="#">Inbox</a>
-          </li>
-          <li>
-            <a href="#">History</a>
-          </li>
-          <li>
-            <a href="#">Studio</a>
-          </li>
-          <li>
-            <a href="#">Commons</a>
-          </li>
-          <li>
-            <a href="#">Help</a>
-          </li>
-        </ul>
-      </td>
-      <td name="course-navigation-sidebar">
-        <ul>
-          <li>
-            <a href="/kanbas/home.html">Home</a>
-          </li>
-          <li>
-            <a href="#">Modules</a>
-          </li>
-          <li>
-            <a href="#">Piazza</a>
-          </li>
-          <li>
-            <a href="#">Zoom Meetings</a>
-          </li>
-          <li>
-            <a href="/kanbas/assignments">Assignments</a>
-          </li>
-          <li>
-            <a href="#">Quizzes</a>
-          </li>
-          <li>
-            <a href="/kanbas/grades.html">Grades</a>
-          </li>
-          <li>
-            <a href="#">People</a>
-          </li>
-          <li>
-            <a href="#">Panopto Video</a>
-          </li>
-          <li>
-            <a href="#">Discussions</a>
-          </li>
-          <li>
-            <a href="#">Announcements</a>
-          </li>
-          <li>
-            <a href="#">Pages</a>
-          </li>
-          <li>
-            <a href="#">Files</a>
-          </li>
-          <li>
-            <a href="#">Rubrics</a>
-          </li>
-          <li>
-            <a href="#">Outcomes</a>
-          </li>
-          <li>
-            <a href="#">Collaborations</a>
-          </li>
-          <li>
-            <a href="#">Syllabus</a>
-          </li>
-          <li>
-            <a href="#">Settings</a>
-          </li>
-        </ul>
-      </td>
-      <td name="course-content">
-        <button type="button">Collapse All</button>
-        <button type="button">View Progress</button>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="/stylesheets/index.css">
 
-        <select id="select-publishing-action">
-          <option value="publish-all" selected>Publish All</option>
-          <option value="publish-selected">Publish Selected</option>
-          <option value="unpublish-all">Unpublish All</option>
-          <option value="unpublish-selected">Unpublish Selected</option>
-        </select>
+<!--  -->
+<!--  -->
 
-        <button type="button">Module</button>
+<div class="row">
 
-        <ul name="weeks">
+  <div class="col-0 col-sm-1 me-4 me-md-1 me-lg-0">
+    <div class="kanbas-navigation-sidebar d-none d-sm-flex flex-column bg-black">
+      <img src="/images/kanbas-navbar-nu-logo.jpg" alt="">
 
-          <li name="week-00">
-            WEEK 0 - INTRO
+      <ul class="nav nav-pills flex-column text-center">
+        <li>
+          <a href="/kanbas/profile/index.html" class="nav-link ">
+            <img class="img-fluid rounded-circle" src="/images/blank-profile-photo.jpg" alt="">
+            Account
+          </a>
+        </li>
+        <li>
+          <a href="/kanbas/dashboard.html" class="nav-link">
+            <i class="fas fa-tachometer-alt fa-2x d-block wd-icon-primary"></i>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="/kanbas/home.html" class="nav-link active">
+            <i class="fa-solid fa-book fa-2x d-block wd-icon-primary"></i>
+            Courses
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-regular fa-calendar-days fa-2x d-block wd-icon-primary"></i>
+            Calendar
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-solid fa-inbox fa-2x d-block wd-icon-primary"></i>
+            Inbox
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-regular fa-clock fa-2x d-block wd-icon-primary"></i>
+            History
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fa-solid fa-tv fa-2x d-block wd-icon-primary"></i>
+            Studio
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <div class="fa-stack wd-icon-primary">
+              <i class="fa-solid fa-c fa-stack-2x"></i>
+              <i class="fa-solid fa-arrow-right fa-stack-1x"></i>
+            </div><br>
+            Commons
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link ">
+            <i class="fas fa-question-circle fa-2x d-block wd-icon-primary"></i>
+            Help
+          </a>
+        </li>
+    </div>
+  </div>
 
-            <ul name="resources">
-              <li name="learning-objectives">
-                LEARNING OBJECTIVES
-                <ul>
-                  <li>Introduction to the course</li>
-                  <li>Learn what is Web Development</li>
-                  <li>Creating a development environment</li>
-                  <li>Creating a Web Application</li>
-                  <li>Getting started with the 1st assignment</li>
+  <div class="col ps-4">
+
+    <!-- Nav Bar here -->
+    <div class="nav-bar me-4">
+      <div class="row pt-3">
+        <div class="col-1">
+          <a href="#">
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="link-primary link-underline-opacity-0">CS5610.1174.202310</a> > Modules
+        </div>
+        <div class="col">
+          <div class="btn-toolbar justify-content-end">
+            <button class="btn btn-secondary">
+              <i class="fa-solid fa-glasses"></i>
+              Student View
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="me-4">
+
+
+    <!-- Page Content -->
+
+    <div class="row">
+      <div class="col-2">
+        <div class="course-navigation-sidebar list-group">
+          <a href="/kanbas/home.html" class="list-group-item list-group-item-action active">
+            Home
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Modules
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Piazza
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Zoom Meetings
+          </a>
+          <a href="/kanbas/assignments" class="list-group-item list-group-item-action">
+            Assignments
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Quizzes
+          </a>
+          <a href="/kanbas/grades.html" class="list-group-item list-group-item-action">
+            Grades
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            People
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Panopto Video
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Discussions
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Announcements
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Pages
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Files
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Rubrics
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Outcomes
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Collaborations
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Syllabus
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            Settings
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+
+          <div class="course-content col">
+
+            <div class="btn-toolbar justify-content-end">
+              <button type="button" class="btn btn-secondary me-1">Collapse All</button>
+              <button type="button" class="btn btn-secondary me-1">View Progress</button>
+
+              <div title="publishing-dropdown-button" class="btn-group me-1">
+                <button type="button" class="btn btn-secondary">
+                  <i class="fa-regular fa-circle-check wd-icon-success pe-1"></i>
+                  Publish All
+                </button>
+                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Publish Selected</a></li>
+                  <li><a class="dropdown-item" href="#">Unpublish All</a></li>
+                  <li><a class="dropdown-item" href="#">Unpublish Selected</a></li>
                 </ul>
+              </div>
+
+              <button type="button" class="btn btn-primary">
+                <i class="fa-solid fa-plus"></i>
+                Module
+              </button>
+
+              <button type="button" class="btn btn-secondary ms-1">
+                <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+              </button>
+            </div>
+
+            <hr>
+
+            <ul title="list-of-weeks" class="list-group">
+              <!-- Each list group item is one week of content -->
+
+              <!-- Week 0 Title -->
+              <div class="row bg-secondary align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold">Week 0 - INTRO</span>
+                </div>
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn ms-2">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Learning Objectives -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold">LEARNING OBJECTIVES</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold ps-5">Introduction to the course</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold ps-5">Learn what is Web Development</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold ps-5">Creating a development environment</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold ps-5">Creating a Web Application</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold ps-5">Getting started with the 1st assignment</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Reading -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold">READING</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold ps-5">Full Stack Developer - Chapter 1 - Introduction</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold ps-5">Full Stack Developer - Chapter 2 - Creating User Interfaces With
+                    HTML</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slides -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <span class="fw-bold">SLIDES</span>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <div class="col ps-5">
+                    <i class="fa-solid fa-link"></i>
+                    <a href="#" class="link-underline link-underline-opacity-0">
+                      Introduction to Web Development
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <div class="col ps-5">
+                    <i class="fa-solid fa-link"></i>
+                    <a href="#" class="link-underline link-underline-opacity-0">
+                      Creating an HTTP server with Node.js
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="row align-items-center">
+                <div class="col d-flex align-items-center">
+                  <button class="btn">
+                    <i class="fa-solid fa-grip-vertical"></i>
+                  </button>
+                  <div class="col ps-5">
+                    <i class="fa-solid fa-link"></i>
+                    <a href="#" class="link-underline link-underline-opacity-0">
+                      Creating a React Application
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="btn-toolbar justify-content-end align-items-center">
+                    <i class="fas fa-check-circle wd-icon-success"></i>
+                    <button type="button" class="btn">
+                      <i class="fa-solid fa-ellipsis fa-rotate-90"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <div class="course-additional-info col-3 ps-4 pe-4">
+            <h2>Course Status</h2>
+
+            <div class="btn-group mb-3">
+              <button type="button" class="btn btn-secondary">
+                <i class="fa-regular fa-circle-xmark"></i>
+                <small>Unpublish</small>
+              </button>
+              <button type="button" class="btn btn-success wd-washed-out">
+                <i class="fa-solid fa-circle-check"></i>
+                <small>Published</small>
+              </button>
+            </div>
+
+            <div class="btn-toolbar flex-column align-items-between mb-3">
+              <button type="button" class="btn btn-secondary mb-1">
+                <i class="fa-solid fa-file-import"></i>
+                <small>Import Existing Content</small>
+              </button>
+              <button type="button" class="btn btn-secondary mb-1">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <small>Import From Commons</small>
+              </button>
+              <button type="button" class="btn btn-secondary mb-1">
+                <i class="fa-solid fa-circle-dot"></i>
+                <small>Choose Home Page</small>
+              </button>
+              <button type="button" class="btn btn-secondary mb-1">
+                <i class="fa-solid fa-bars-staggered"></i>
+                <small>View Course Stream</small>
+              </button>
+              <button type="button" class="btn btn-secondary mb-1">
+                <i class="fa-solid fa-bullhorn"></i>
+                <small>New Announcement</small>
+              </button>
+              <button type="button" class="btn btn-secondary mb-1">
+                <i class="fa-solid fa-chart-simple"></i>
+                <small>New Analytics</small>
+              </button>
+              <button type="button" class="btn btn-secondary">
+                <i class="fa-regular fa-bell"></i>
+                <small>View Course Notifications</small>
+              </button>
+            </div>
+
+            <div class="row pt-2 d-flex align-items-center">
+              <h2 class="col">Coming Up</h2>
+              <div class="col d-flex justify-content-end">
+                <a href="#" class="link-underline link-underline-opacity-0">
+                  <i class="fa-regular fa-calendar text-black"></i>
+                  View Calendar
+                </a>
+              </div>
+
+            </div>
+
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="row">
+                  <i class="col-1 fa fa-calendar"></i>
+                  <div class="col">
+                    <a href="#" class="fw-bold link-underline link-underline-opacity-0">Lecture</a>
+                    <div>
+                      <small class="lh-sm">CS4550.12631.202410</small>
+                      <small class="lh-sm">Sep 11 at 11:45am</small>
+                    </div>
+                  </div>
+                </div>
               </li>
-
-              <li name="reading">
-                READING
-                <ul>
-                  <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                  <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                </ul>
+              <li class="list-group-item">
+                <div class="row">
+                  <i class="col-1 fa fa-calendar"></i>
+                  <div class="col">
+                    <a href="#" class="fw-bold link-underline link-underline-opacity-0">CS5610 06 SP23 Lecture</a>
+                    <div>
+                      <small class="lh-sm">CS4550.12631.202410</small>
+                      <small class="lh-sm">Sep 11 at 6pm</small>
+                    </div>
+                  </div>
+                </div>
               </li>
-
-              <li name="slides">
-                SLIDES
-                <ul>
-                  <li>
-                    <a href="#">Introduction to Web Development Links to an external site.</a>
-                  </li>
-                  <li>
-                    <a href="#">Creating an HTTP server with Node.js Links to an external site.</a>
-                  </li>
-                  <li>
-                    <a href="#">Creating a React Application Links to an external site.</a>
-                  </li>
-                </ul>
+              <li class="list-group-item">
+                <div class="row">
+                  <i class="col-1 fa fa-calendar"></i>
+                  <div class="col">
+                    <a href="#" class="fw-bold link-underline link-underline-opacity-0">CS5610 Web Development Summer 1
+                      2023 -
+                      Lecture</a>
+                    <div>
+                      <small class="lh-sm">CS4550.12631.202410</small>
+                      <small class="lh-sm">Sep 11 at 7pm</small>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
-
-          </li>
-
-          <li name="week-01">
-            WEEK 1 - HTML
-
-            <ul name="resources">
-              <li name="learning-objectives">
-                LEARNING OBJECTIVES
-                <ul>
-                  <li>Learn how to create user interfaces with HTML</li>
-                  <li>Keep working on assignment 1</li>
-                  <li>Deploy the assignment to Netlify</li>
-                </ul>
-              </li>
-
-              <li name="reading">
-                READING
-                <ul>
-                  <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                  <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                </ul>
-              </li>
-
-              <li name="slides">
-                SLIDES
-                <ul>
-                  <li>
-                    <a href="#">Introduction to HTML and the DOM Links to an external site.</a>
-                  </li>
-                  <li>
-                    <a href="#">Formatting Web content with Headings and Paragraphs Links to an external site.</a>
-                  </li>
-                  <li>
-                    <a href="#">Formatting content with Lists and Tables Links to an external site.</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </td>
-      <td name="course-additional-info">
-        <h2>Course Status</h2>
-
-        <button type="button">Unpublish</button>
-        <button type="button">Published</button>
-
-        <ul>
-          <li><a href="#">Import Existing Content</a></li>
-          <li><a href="#">Import From Commons</a></li>
-          <li><a href="#">Choose Home Page</a></li>
-          <li><a href="#">View Course Stream</a></li>
-          <li><a href="#">New Announcement</a></li>
-          <li><a href="#">New Analytics</a></li>
-          <li><a href="#">View Course Notifications</a></li>
-        </ul>
-
-        <h2>Coming Up</h2>
-
-        <a href="#">View Calendar</a>
-
-        <ul>
-          <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-          <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-          <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

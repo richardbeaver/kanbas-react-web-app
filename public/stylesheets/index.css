@@ -12008,15 +12008,23 @@ textarea.form-control-lg {
   filter: contrast(30%) brightness(150%);
 }
 
-.account-navigation-sidebar .list-group-item {
+.account-navigation-sidebar .list-group-item,
+.course-navigation-sidebar .list-group-item {
   border: none;
   color: red;
 }
 
-.account-navigation-sidebar .list-group-item.active {
+.account-navigation-sidebar .list-group-item.active,
+.course-navigation-sidebar .list-group-item.active {
   color: black;
   background-color: white;
   border-left: 3px solid black;
+}
+
+.account-navigation-sidebar .list-group-item:first-child,
+.course-navigation-sidebar .list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .kanbas-navigation-sidebar {
