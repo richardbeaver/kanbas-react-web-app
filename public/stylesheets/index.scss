@@ -75,6 +75,21 @@ $position-values: (
   max-width: 80%;
 }
 
+// Kanbas Sidebar Small Screens
+
+.wd-kanbas-sidebar-sm img {
+  max-width: 20%;
+}
+
+// Top Nav Small Screens
+
+.wd-top-nav-sm i,
+.wd-top-nav-sm a,
+.wd-top-nav-sm span,
+.wd-top-nav-sm h4 {
+  color: $secondary;
+}
+
 // Dashboard
 
 .dashboard .card-header {

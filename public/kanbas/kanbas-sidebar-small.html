@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="/stylesheets/index.css">
+
+<!--  -->
+<!--  -->
+
+<!--
+  Kanbas navigation page for small and x-small screens 
+  Only used as the destination of a navigation button that appears on small and x-sm screens
+-->
+
+<div class="wd-kanbas-sidebar-sm d-md-none text-center">
+  <div class="row">
+    <div class="btn-toolbar justify-content-end align-items-center">
+      <!-- Have the X link back to the last page the user was on before opening this menu page -->
+      <button type="button" class="btn" onclick="javascript:history.back()">
+        <i class="fa-solid fa-x fa-2x"></i>
+      </button>
+    </div>
+
+    <div class="nav d-grid gap-2 flex-column">
+      <div>
+        <a href="/kanbas/profile/index.html" class="nav-link justify-content-between">
+          <img class="img rounded-circle" src="/images/blank-profile-photo.jpg" alt="">
+          Account
+        </a>
+      </div>
+      <div>
+        <a href="/kanbas/dashboard.html" class="nav-link">
+          <i class="fas fa-tachometer-alt fa-2x wd-icon-primary"></i>
+          Dashboard
+        </a>
+      </div>
+      <div>
+        <a href="/kanbas/home.html" class="nav-link">
+          <i class="fa-solid fa-book fa-2x wd-icon-primary"></i>
+          Courses
+        </a>
+      </div>
+      <div>
+        <a href="#" class="nav-link">
+          <i class="fa-regular fa-calendar-days fa-2x  wd-icon-primary"></i>
+          Calendar
+        </a>
+      </div>
+      <div>
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-inbox fa-2x  wd-icon-primary"></i>
+          Inbox
+        </a>
+      </div>
+      <div>
+        <a href="#" class="nav-link">
+          <i class="fa-regular fa-clock fa-2x  wd-icon-primary"></i>
+          History
+        </a>
+      </div>
+      <div>
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-tv fa-2x  wd-icon-primary"></i>
+          Studio
+        </a>
+      </div>
+      <div>
+        <a href="#" class="nav-link">
+          <div class="fa-stack wd-icon-primary">
+            <i class="fa-solid fa-c fa-stack-2x"></i>
+            <i class="fa-solid fa-arrow-right fa-stack-1x"></i>
+          </div><br>
+          Commons
+        </a>
+      </div>
+      <div>
+        <a href="#" class="nav-link">
+          <i class="fas fa-question-circle fa-2x  wd-icon-primary"></i>
+          Help
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
