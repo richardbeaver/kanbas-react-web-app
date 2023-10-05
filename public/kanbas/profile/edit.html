@@ -6,8 +6,8 @@
 
 <div class="row">
 
-  <div class="col-0 col-sm-1 me-4 me-md-1 me-lg-0">
-    <div class="kanbas-navigation-sidebar d-none d-sm-flex flex-column bg-black">
+  <div class="d-none d-md-block col-1 me-4 me-md-1 me-lg-0">
+    <div class="kanbas-navigation-sidebar d-none d-md-flex flex-column bg-black">
       <img src="/images/kanbas-navbar-nu-logo.jpg" alt="">
 
       <ul class="nav nav-pills flex-column text-center">
@@ -75,7 +75,7 @@
 
     <!-- Page content here -->
 
-    <div class="nav-bar me-4">
+    <div class="nav-bar me-4 d-none d-md-block">
       <div class="row pt-3">
         <div class="col-1">
           <a href="#">
@@ -88,10 +88,35 @@
       </div>
     </div>
 
+    <div class="wd-top-nav-sm d-block d-md-none bg-dark ms-0 me-0">
+      <div class="row pt-3 align-items-center pb-3 ps-2">
+        <div class="col-1">
+          <!-- Link to the small navigation page when screen is x-small
+          Otherwise, doesn't link anywhere yet -->
+          <a href="/kanbas/kanbas-sidebar-small.html">
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </a>
+        </div>
+        <div class="col">
+          <h4>Richard Beaver's Profile</h4>
+        </div>
+        <div class="col-1">
+          <a href="#">
+            <i class="fa-solid fa-glasses"></i>
+          </a>
+        </div>
+        <div class="col-1 me-2">
+          <a href="/kanbas/account-nav-small.html">
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <hr class="me-4">
 
     <div class="row">
-      <div class="col-3">
+      <div class="d-none d-md-block col-md-2">
         <div class="account-navigation-sidebar list-group">
           <a href="#" class="list-group-item list-group-item-action">
             Notifications

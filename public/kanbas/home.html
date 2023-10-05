@@ -6,8 +6,8 @@
 
 <div class="row">
 
-  <div class="col-0 col-sm-1 me-4 me-md-1 me-lg-0">
-    <div class="kanbas-navigation-sidebar d-none d-sm-flex flex-column bg-black">
+  <div class="d-none d-md-block col-1 me-4 me-md-1 me-lg-0">
+    <div class="kanbas-navigation-sidebar d-none d-md-flex flex-column bg-black">
       <img src="/images/kanbas-navbar-nu-logo.jpg" alt="">
 
       <ul class="nav nav-pills flex-column text-center">
@@ -73,8 +73,7 @@
 
   <div class="col ps-4">
 
-    <!-- Nav Bar here -->
-    <div class="nav-bar me-4">
+    <div class="nav-bar me-4 d-none d-md-block">
       <div class="row pt-3">
         <div class="col-1">
           <a href="#">
@@ -82,7 +81,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="#" class="link-primary link-underline-opacity-0">CS5610.1174.202310</a> > Modules
+          <a href="#" class="link-primary link-underline-opacity-0">CS5610.1174.202310</a> > Home
         </div>
         <div class="col">
           <div class="btn-toolbar justify-content-end">
@@ -95,13 +94,39 @@
       </div>
     </div>
 
+    <div class="wd-top-nav-sm d-block d-md-none bg-dark ms-0 me-0">
+      <div class="row pt-3 align-items-center pb-3 ps-2">
+        <div class="col-1">
+          <!-- Link to the small navigation page when screen is x-small
+          Otherwise, doesn't link anywhere yet -->
+          <a href="/kanbas/kanbas-sidebar-small.html">
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="link-secondary link-underline-opacity-0">CS5610.1174.202310</a>
+          <span> > Home</span>
+        </div>
+        <div class="col-1">
+          <a href="#">
+            <i class="fa-solid fa-glasses"></i>
+          </a>
+        </div>
+        <div class="col-1 me-2">
+          <a href="/kanbas/course-nav-small.html">
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <hr class="me-4">
 
 
     <!-- Page Content -->
 
     <div class="row">
-      <div class="col-2">
+      <div class="d-none d-md-block col-md-2">
         <div class="course-navigation-sidebar list-group">
           <a href="/kanbas/home.html" class="list-group-item list-group-item-action active">
             Home
@@ -162,7 +187,7 @@
       <div class="col">
         <div class="row">
 
-          <div class="course-content col">
+          <div class="course-content col ps-4 pe-4">
 
             <div class="btn-toolbar justify-content-end">
               <button type="button" class="btn btn-secondary me-1">Collapse All</button>
@@ -491,7 +516,7 @@
             </ul>
           </div>
 
-          <div class="course-additional-info col-3 ps-4 pe-4">
+          <div class="course-additional-info d-none d-lg-block col-lg-3 ps-4 pe-4">
             <h2>Course Status</h2>
 
             <div class="btn-group mb-3">
