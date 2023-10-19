@@ -6,7 +6,7 @@ function Dashboard() {
   const courses = db.courses;
 
   return (
-    <div className="dashboard">
+    <div className="wd-dashboard">
       <div className="nav-bar mt-3 me-2 d-none d-md-block">
         <h1 className="display-5 text-left">Dashboard</h1>
       </div>
