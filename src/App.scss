@@ -1,0 +1,125 @@
+// Bootstrap color overrides
+$primary: rgb(216, 0, 0);
+$secondary: rgb(193, 190, 190);
+
+// Add a 5% position value
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%,
+  5: 5%,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Custom CSS rules
+
+// Icons and Colors
+
+.btn-primary {
+  color: white;
+}
+
+.wd-icon-primary {
+  color: $primary;
+}
+
+.wd-icon-success {
+  color: $success;
+}
+
+.wd-washed-out {
+  filter: contrast(30%) brightness(150%);
+}
+
+// Account / Course Navigation
+
+.account-navigation-sidebar .list-group-item,
+.course-navigation-sidebar .list-group-item {
+  border: none;
+  color: $primary;
+}
+
+.account-navigation-sidebar .list-group-item.active,
+.course-navigation-sidebar .list-group-item.active {
+  color: black;
+  background-color: white;
+  border-left: 3px solid black;
+}
+
+.account-navigation-sidebar .list-group-item:first-child,
+.course-navigation-sidebar .list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+// Kanbas Navigation
+
+.wd-kanbas-navigation-sidebar {
+  width: 100px;
+  // So that there's a black line on bottom when bottom icon is active
+  border-bottom: 2px black solid;
+}
+
+.wd-kanbas-navigation-sidebar .nav-pills .nav-link {
+  color: white;
+  padding: 6 0 6 0;
+  font-size: small;
+  border-radius: 0;
+}
+
+.wd-kanbas-navigation-sidebar .nav-pills .nav-link.active {
+  color: $primary;
+  background-color: white;
+}
+
+.wd-kanbas-navigation-sidebar .nav-link img {
+  max-width: 80%;
+}
+
+// Kanbas Sidebar Small Screens
+
+.wd-kanbas-sidebar-sm img {
+  max-width: 20%;
+}
+
+// Top Nav Small Screens
+
+.wd-top-nav-sm i,
+.wd-top-nav-sm a,
+.wd-top-nav-sm span,
+.wd-top-nav-sm h4 {
+  color: $secondary;
+}
+
+// Dashboard
+
+.dashboard .card-header {
+  height: 100px;
+}
+
+.dashboard .card {
+  width: 18em;
+}
+
+// Course Home Page
+
+.course-content ul,
+.assignments-page ul {
+  border-radius: 0;
+}
+
+.course-content .list-group .row {
+  min-height: 40px;
+  padding: 5 5 5 5;
+  border: 1px solid $secondary;
+}
+
+.assignments-page .list-group .row {
+  min-height: 40px;
+  padding: 5 5 5 5;
+}
+
+.course-additional-info .list-group-item {
+  border-radius: 0;
+}
