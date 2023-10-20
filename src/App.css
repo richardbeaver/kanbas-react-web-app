@@ -12022,9 +12022,10 @@ textarea.form-control-lg {
 }
 
 .account-navigation-sidebar .list-group-item:first-child,
-.wd-course-navigation-sidebar .list-group-item:first-child {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.account-navigation-sidebar .list-group-item:last-child,
+.wd-course-navigation-sidebar .list-group-item:first-child,
+.wd-course-navigation-sidebar .list-group-item:last-child {
+  border-radius: 0;
 }
 
 .wd-kanbas-navigation-sidebar {
@@ -12079,11 +12080,11 @@ textarea.form-control-lg {
   border: 1px solid rgb(193, 190, 190);
 }
 
+.course-additional-info .list-group-item {
+  border-radius: 0;
+}
+
 .assignments-page .list-group .row {
   min-height: 40px;
   padding: 5 5 5 5;
-}
-
-.course-additional-info .list-group-item {
-  border-radius: 0;
 }/*# sourceMappingURL=App.css.map */

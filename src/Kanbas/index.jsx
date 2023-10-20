@@ -10,11 +10,13 @@ function Kanbas() {
     <>
       <div className="d-flex">
         <KanbasNavigation />
+
         <div className="container-fluid">
           <Routes>
             <Route path="/" element={<Navigate to={"Dashboard"} />} />
             <Route path="Account" element={<Account />} />
             <Route path="Dashboard" element={<Dashboard />} />
+            <Route path="Courses" element={<h1>Courses</h1>} />
             <Route path="Courses/:courseId/*" element={<Courses />} />
             <Route path="Calendar" element={<Calendar />} />
           </Routes>
