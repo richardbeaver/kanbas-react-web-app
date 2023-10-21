@@ -11964,8 +11964,9 @@ textarea.form-control-lg {
   border: 1px solid rgb(193, 190, 190);
 }
 
-.course-additional-info .list-group-item {
-  border-radius: 0;
+.wd-course-additional-info .list-group-item:first-child,
+.wd-course-additional-info .list-group-item:last-child {
+  border-radius: 0 0 0 0;
 }
 
 .assignments-page .list-group .row {

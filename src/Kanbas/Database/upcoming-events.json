@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "e0",
+    "title": "Lecture",
+    "course": "RS101",
+    "time": "Sep 11 at 11:45am"
+  },
+  {
+    "_id": "e1",
+    "title": "Lecture",
+    "course": "RS101",
+    "time": "Sep 11 at 6pm"
+  },
+  {
+    "_id": "e2",
+    "title": "Lecture",
+    "course": "RS101",
+    "time": "Sep 11 at 7pm"
+  },
+  {
+    "_id": "e3",
+    "title": "Lecture",
+    "course": "RS102",
+    "time": "Sep 12 at 11:45am"
+  },
+  {
+    "_id": "e4",
+    "title": "Lecture",
+    "course": "RS102",
+    "time": "Sep 12 at 6pm"
+  },
+  {
+    "_id": "e5",
+    "title": "Lecture",
+    "course": "RS102",
+    "time": "Sep 12 at 7pm"
+  },
+  {
+    "_id": "e6",
+    "title": "Lecture",
+    "course": "RS103",
+    "time": "Sep 13 at 11:45am"
+  },
+  {
+    "_id": "e7",
+    "title": "Lecture",
+    "course": "RS103",
+    "time": "Sep 13 at 6pm"
+  },
+  {
+    "_id": "e8",
+    "title": "Lecture",
+    "course": "RS103",
+    "time": "Sep 13 at 7pm"
+  }
+]

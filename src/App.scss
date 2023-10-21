@@ -115,15 +115,15 @@ $position-values: (
   border-radius: 0;
 }
 
-
 .wd-module-list .wd-module-row {
   min-height: 40px;
   padding: 5px 5px 5px 5px;
   border: 1px solid $secondary;
 }
 
-.course-additional-info .list-group-item {
-  border-radius: 0;
+.wd-course-additional-info .list-group-item:first-child,
+.wd-course-additional-info .list-group-item:last-child {
+  border-radius: 0 0 0 0;
 }
 
 // Assignments page

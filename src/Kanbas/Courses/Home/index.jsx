@@ -1,14 +1,17 @@
 import ModuleList from "../Modules/ModuleList";
+import CourseStatus from "./CourseStatus";
+import ModulesButtons from "../Modules/ModulesButtons";
 
 function Home() {
   return (
     <div className="row">
-      <div className="col-10 d-flex flex-column gap-3">
-        <h2>Home</h2>
+      <div className="col d-flex flex-column gap-3">
+        <ModulesButtons />
+        <hr />
         <ModuleList />
       </div>
-      <div className="col-2">
-        <h2>Status</h2>
+      <div className="col-3">
+        <CourseStatus />
       </div>
     </div>
   );
