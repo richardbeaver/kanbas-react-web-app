@@ -10,7 +10,7 @@ function Profile() {
       <div>
         <img src="/images/blank-profile-photo.jpg"
              className="img-fluid rounded-circle col-4 col-sm-5 col-md-4 col-lg-3"
-             alt="blank profile photo" />
+             alt="blank profile icon" />
         <h2>Richard Beaver</h2>
 
         <h3>Contact</h3>

@@ -1,8 +1,4 @@
-import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
-import { HiMiniEllipsisVertical } from "react-icons/hi2";
 import { BiSolidCog } from "react-icons/bi";
-
-const iconsSize = "20";
 
 function GradesButtons() {
   return (
