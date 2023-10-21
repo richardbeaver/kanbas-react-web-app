@@ -11887,6 +11887,11 @@ textarea.form-control-lg {
   filter: contrast(30%) brightness(150%);
 }
 
+.account-navigation-sidebar,
+.wd-course-navigation-sidebar {
+  width: 150px;
+}
+
 .account-navigation-sidebar .list-group-item,
 .wd-course-navigation-sidebar .list-group-item {
   border: none;
@@ -11954,7 +11959,7 @@ textarea.form-control-lg {
 }
 
 .wd-module-list .wd-module-row {
-  min-height: 60px;
+  min-height: 40px;
   padding: 5px 5px 5px 5px;
   border: 1px solid rgb(193, 190, 190);
 }

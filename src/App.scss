@@ -34,6 +34,11 @@ $position-values: (
 
 // Account / Course Navigation
 
+.account-navigation-sidebar,
+.wd-course-navigation-sidebar {
+  width: 150px;
+}
+
 .account-navigation-sidebar .list-group-item,
 .wd-course-navigation-sidebar .list-group-item {
   border: none;
@@ -110,8 +115,9 @@ $position-values: (
   border-radius: 0;
 }
 
+
 .wd-module-list .wd-module-row {
-  min-height: 60px;
+  min-height: 40px;
   padding: 5px 5px 5px 5px;
   border: 1px solid $secondary;
 }

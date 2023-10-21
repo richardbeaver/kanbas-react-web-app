@@ -1,11 +1,11 @@
 import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
-import { FaEllipsisVertical } from "react-icons/fa6";
+import { HiMiniEllipsisVertical } from "react-icons/hi2";
 
 const iconsSize = "20";
 
 function ModulesButtons() {
   return (
-    <div className="btn-toolbar justify-content-end">
+    <div className="d-flex justify-content-end gap-1 flex-wrap text-nowrap">
 
       <button type="button" className="btn btn-secondary">
         Collapse All
@@ -42,7 +42,7 @@ function ModulesButtons() {
 
       <button type="button"
               className="btn btn-secondary d-flex align-items-center">
-        <FaEllipsisVertical size={iconsSize} />
+        <HiMiniEllipsisVertical size={iconsSize} />
       </button>
 
     </div>
