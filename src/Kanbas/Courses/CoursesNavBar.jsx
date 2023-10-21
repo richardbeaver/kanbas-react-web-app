@@ -12,7 +12,8 @@ function CoursesNavBar({ course, page }) {
         </Link>
 
         <div>
-          <Link to="#" className="link-primary link-underline-opacity-0">
+          <Link to={`/Kanbas/Courses/${course._id}`}
+                className="link-primary link-underline-opacity-0">
             {course.number}
           </Link>{" "}
           {`> ${page}`}

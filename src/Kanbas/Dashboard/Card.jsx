@@ -25,14 +25,17 @@ function Card({ course }) {
               {course.name}
             </h5>
             <p className="card-text mb-0">{course.number}</p>
-            <p className="card-text mb-2">{`${course.startDate} - ${course.endDate}`}</p>
+            <p className="card-text mb-2">
+              {`${course.startDate} - ${course.endDate}`}
+            </p>
             <BiSolidBook />
           </div>
         </div>
       </Link>
 
       {/* Added "5%" to Bootstrap $position-values Sass map to use here */}
-      <div className="btn-toolbar justify-content-end position-absolute top-5 end-5">
+      <div
+        className="btn-toolbar justify-content-end position-absolute top-5 end-5">
         <button className="btn">
           <FaEllipsisVertical style={{ color: "white" }} />
         </button>
