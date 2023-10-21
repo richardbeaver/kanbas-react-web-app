@@ -1,10 +1,7 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import db from "../../Database";
 import AssignmentsInputs from "./AssignmentsInputs";
-import { FaGripVertical } from "react-icons/fa";
-import { AiFillCheckCircle, AiOutlinePlus } from "react-icons/ai";
-import { FaEllipsisVertical } from "react-icons/fa6";
 import AssignmentsListTitle from "./AssignmentsListTitle";
 import AssignmentsList from "./AssignmentsList";
 

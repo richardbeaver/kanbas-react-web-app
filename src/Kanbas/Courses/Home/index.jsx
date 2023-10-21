@@ -10,7 +10,7 @@ function Home() {
         <hr />
         <ModuleList />
       </div>
-      <div className="col-3">
+      <div className="d-none d-lg-block col-lg-3">
         <CourseStatus />
       </div>
     </div>

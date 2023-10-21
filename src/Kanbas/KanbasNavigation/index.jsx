@@ -22,7 +22,7 @@ function KanbasNavigation() {
   const { pathname } = useLocation();
 
   return (
-    <div className="wd-kanbas-navigation-sidebar d-none d-sm-flex flex-column bg-black">
+    <div className="wd-kanbas-navigation-sidebar d-flex flex-column bg-black">
       <img src="/images/kanbas-navbar-nu-logo.jpg" alt="" />
 
       <div className="nav nav-pills flex-column text-center">

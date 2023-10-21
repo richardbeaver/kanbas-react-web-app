@@ -22,7 +22,9 @@ function Courses() {
       <hr />
 
       <div className="d-flex">
-        <CourseNavigation />
+        <div className="d-none d-md-block">
+          <CourseNavigation />
+        </div>
 
         <div className="container-fluid">
           <Routes>

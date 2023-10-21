@@ -10,7 +10,9 @@ function Account() {
       <hr />
 
       <div className="d-flex">
-        <AccountNavigation />
+        <div className="d-none d-md-block">
+          <AccountNavigation />
+        </div>
 
         <div className="container-fluid">
           <Routes>

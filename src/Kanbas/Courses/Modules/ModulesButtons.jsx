@@ -1,5 +1,6 @@
 import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
 import { HiMiniEllipsisVertical } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const iconsSize = "20";
 
@@ -28,9 +29,12 @@ function ModulesButtons() {
           <span className="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul className="dropdown-menu">
-          <li><a className="dropdown-item" href="#">Publish Selected</a></li>
-          <li><a className="dropdown-item" href="#">Unpublish All</a></li>
-          <li><a className="dropdown-item" href="#">Unpublish Selected</a></li>
+          <li>
+            <Link className="dropdown-item" to="#">Publish Selected</Link>
+          </li>
+          <li><Link className="dropdown-item" to="#">Unpublish All</Link></li>
+          <li><Link className="dropdown-item" to="#">Unpublish Selected</Link>
+          </li>
         </ul>
       </div>
 

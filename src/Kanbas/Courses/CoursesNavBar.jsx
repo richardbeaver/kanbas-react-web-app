@@ -5,7 +5,7 @@ import { BiGlassesAlt } from "react-icons/bi";
 function CoursesNavBar({ course, page }) {
   return (
     <div
-      className="nav-bar mx-3 mt-3 d-none d-sm-flex justify-content-between align-items-center">
+      className="nav-bar mx-3 mt-3 d-flex justify-content-between align-items-center">
       <div className="d-flex gap-3 justify-content-between align-items-center">
         <Link to="#">
           <FaBars className="wd-icon-primary me-3" size="30" />

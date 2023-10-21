@@ -9,8 +9,10 @@ import CoursesList from "./Courses/CoursesList";
 function Kanbas() {
   return (
     <>
-      <div className="d-flex">
-        <KanbasNavigation />
+      <div className="d-flex flex-column flex-sm-row">
+        <div className="d-none d-sm-flex">
+          <KanbasNavigation />
+        </div>
 
         <div className="container-fluid">
           <Routes>
