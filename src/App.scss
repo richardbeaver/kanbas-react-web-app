@@ -108,22 +108,25 @@ $position-values: (
   width: 18em;
 }
 
-// Course Home Page
-
-.wd-module-list,
-.assignments-page ul {
-  border-radius: 0;
-}
-
-.wd-module-list .wd-module-row {
-  min-height: 40px;
-  padding: 5px 5px 5px 5px;
-  border: 1px solid $secondary;
-}
+// Home page - Course Status
 
 .wd-course-additional-info .list-group-item:first-child,
 .wd-course-additional-info .list-group-item:last-child {
   border-radius: 0 0 0 0;
+}
+
+// Course Modules / Assignments
+
+.wd-module-list,
+.wd-assignment-list {
+  border-radius: 0;
+}
+
+.wd-assignment-list .wd-assignment-row,
+.wd-module-list .wd-module-row {
+  min-height: 40px;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid $secondary;
 }
 
 // Assignments page
