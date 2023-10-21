@@ -9,11 +9,15 @@ function Module({ module }) {
 
   return (
     <div className="wd-module">
-      <ModuleTitle title={name} size={iconsSize} />
-      <ModuleDescription description={description} />
-      {lessons && lessons.map((lesson, index) => (
-        <Lesson key={index} lesson={lesson} size={iconsSize} />
-      ))}
+      <details open>
+        <summary>
+          <ModuleTitle title={name} size={iconsSize} />
+        </summary>
+        <ModuleDescription description={description} />
+        {lessons && lessons.map((lesson, index) => (
+          <Lesson key={index} lesson={lesson} size={iconsSize} />
+        ))}
+      </details>
     </div>
   );
 }

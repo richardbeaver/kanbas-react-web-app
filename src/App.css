@@ -11963,7 +11963,7 @@ textarea.form-control-lg {
   border-radius: 0;
 }
 
-.wd-assignment-list .wd-assignment-row,
+.wd-assignment-row,
 .wd-module-list .wd-module-row {
   min-height: 40px;
   padding: 5px 5px 5px 5px;
@@ -11973,6 +11973,10 @@ textarea.form-control-lg {
 .assignments-page .list-group .row {
   min-height: 40px;
   padding: 5px 5px 5px 5px;
+}
+
+summary::marker {
+  content: "";
 }
 
 /*# sourceMappingURL=App.css.map */
