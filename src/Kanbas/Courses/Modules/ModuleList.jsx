@@ -8,13 +8,13 @@ function ModuleList() {
   const modules = db.modules;
 
   return (
-    <ul className="list-group">
+    <div className="wd-module-list d-flex flex-column gap-3">
       {modules
         .filter((module) => module.course === courseId)
         .map((module, index) => (
           <Module key={index} module={module} />
         ))}
-    </ul>
+    </div>
   );
 }
 

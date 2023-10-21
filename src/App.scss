@@ -4,10 +4,10 @@ $secondary: rgb(193, 190, 190);
 
 // Add a 5% position value
 $position-values: (
-  0: 0,
-  50: 50%,
-  100: 100%,
-  5: 5%,
+        0: 0,
+        50: 50%,
+        100: 100%,
+        5: 5%,
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -64,7 +64,7 @@ $position-values: (
 
 .wd-kanbas-navigation-sidebar .nav-pills .nav-link {
   color: white;
-  padding: 6 0 6 0;
+  padding: 6px 0 6px 0;
   font-size: small;
   border-radius: 0;
 }
@@ -105,14 +105,14 @@ $position-values: (
 
 // Course Home Page
 
-.course-content ul,
+.wd-module-list,
 .assignments-page ul {
   border-radius: 0;
 }
 
-.course-content .list-group .row {
-  min-height: 40px;
-  padding: 5 5 5 5;
+.wd-module-list .wd-module-row {
+  min-height: 60px;
+  padding: 5px 5px 5px 5px;
   border: 1px solid $secondary;
 }
 
@@ -124,5 +124,5 @@ $position-values: (
 
 .assignments-page .list-group .row {
   min-height: 40px;
-  padding: 5 5 5 5;
+  padding: 5px 5px 5px 5px;
 }

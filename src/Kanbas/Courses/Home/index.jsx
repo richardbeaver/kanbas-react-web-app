@@ -3,7 +3,7 @@ import ModuleList from "../Modules/ModuleList";
 function Home() {
   return (
     <div className="row">
-      <div className="col-10">
+      <div className="col-10 d-flex flex-column gap-3">
         <h2>Home</h2>
         <ModuleList />
       </div>
