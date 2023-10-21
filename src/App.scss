@@ -34,26 +34,26 @@ $position-values: (
 
 // Account / Course Navigation
 
-.account-navigation-sidebar,
+.wd-account-navigation-sidebar,
 .wd-course-navigation-sidebar {
   width: 150px;
 }
 
-.account-navigation-sidebar .list-group-item,
+.wd-account-navigation-sidebar .list-group-item,
 .wd-course-navigation-sidebar .list-group-item {
   border: none;
   color: $primary;
 }
 
-.account-navigation-sidebar .list-group-item.active,
+.wd-account-navigation-sidebar .list-group-item.active,
 .wd-course-navigation-sidebar .list-group-item.active {
   color: black;
   background-color: white;
   border-left: 3px solid black;
 }
 
-.account-navigation-sidebar .list-group-item:first-child,
-.account-navigation-sidebar .list-group-item:last-child,
+.wd-account-navigation-sidebar .list-group-item:first-child,
+.wd-account-navigation-sidebar .list-group-item:last-child,
 .wd-course-navigation-sidebar .list-group-item:first-child,
 .wd-course-navigation-sidebar .list-group-item:last-child {
   border-radius: 0;

@@ -1,24 +1,25 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import AccountNavigation from "./AccountNavigation";
 import Profile from "./Profile";
+import { FaBars } from "react-icons/fa6";
+import { BiGlassesAlt } from "react-icons/bi";
+import AccountNavBar from "./AccountNavBar";
+
+const iconsSize = "30";
 
 function Account() {
   return (
     <>
-      <h1>Richard Beaver Profile</h1>
-      <AccountNavigation />
+      <AccountNavBar />
+      <hr />
 
-      <div>
-        <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{
-            left: "320px",
-            top: "50px",
-          }}
-        >
+      <div className="d-flex">
+        <AccountNavigation />
+
+        <div className="container-fluid">
           <Routes>
             <Route path="/" element={<Navigate to="Profile" />} />
-            <Route path="Profile/*" element={<Profile />} />
+            <Route path="Profile" element={<Profile />} />
           </Routes>
         </div>
       </div>

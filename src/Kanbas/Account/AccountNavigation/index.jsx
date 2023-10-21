@@ -6,11 +6,11 @@ function AccountNavigation() {
   const { pathname } = useLocation();
 
   return (
-    <div className="wd-course-navigation list-group" style={{ width: 150 }}>
+    <div className="wd-account-navigation-sidebar list-group">
       {links.map((link, index) => (
         <Link
           key={index}
-          to={`/Kanbas/Account/${link}/*`}
+          to={`/Kanbas/Account/${link}`}
           className={`list-group-item ${pathname.includes(link) && "active"}`}
         >
           {link}
