@@ -12,6 +12,9 @@ function Nav() {
       <Link to="/Labs/a3" className={`nav-link ${activeClass("a3")}`}>
         A3
       </Link>
+      <Link to="/Labs/a4" className={`nav-link ${activeClass("a4")}`}>
+        A4
+      </Link>
       <Link to="/hello" className={`nav-link ${activeClass("hello")}`}>
         Hello
       </Link>
