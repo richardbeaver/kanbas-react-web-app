@@ -1,22 +1,15 @@
-import { useState } from "react";
-import db from "../Database";
 import Card from "./Card";
 import "./index.css";
 import { Link } from "react-router-dom";
 
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
-  const [course, setCourse] = useState({
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-  });
-
-  const addNewCourse = () => {
-    setCourses([...courses, { ...course, _id: new Date().getTime() }]);
-  };
-
+function Dashboard({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse,
+}) {
   return (
     <div className="wd-dashboard">
       <div className="nav-bar mt-3 me-2 d-none d-md-block">
@@ -50,7 +43,13 @@ function Dashboard() {
         type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
       />
-      <button onClick={addNewCourse}>Add</button>
+
+      <button className="btn btn-primary me-2" onClick={addNewCourse}>
+        Add
+      </button>
+      <button className="btn btn-info" onClick={updateCourse}>
+        Update
+      </button>
 
       <div className="list-group d-flex flex-wrap">
         {courses.map((course) => (
@@ -59,6 +58,26 @@ function Dashboard() {
             to={`/Kanbas/Courses/${course._id}`}
             className="list-group-item"
           >
+            <button
+              className="btn btn-secondary me-2"
+              onClick={(event) => {
+                event.preventDefault();
+                setCourse(course);
+              }}
+            >
+              Edit
+            </button>
+
+            <button
+              className="btn btn-danger me-2"
+              onClick={(event) => {
+                event.preventDefault();
+                deleteCourse(course._id);
+              }}
+            >
+              Delete
+            </button>
+
             {course.name}
           </Link>
         ))}

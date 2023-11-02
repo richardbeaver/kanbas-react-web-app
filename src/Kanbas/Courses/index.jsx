@@ -1,4 +1,3 @@
-import db from "../Database";
 import { useLocation, useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
@@ -9,12 +8,12 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import CoursesNavBar from "./CoursesNavBar";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const page = pathname.split("/").at(-1);
 
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
 
   return (
     <>

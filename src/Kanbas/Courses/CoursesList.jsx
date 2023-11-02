@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 
-import db from "../Database";
-
-function CoursesList() {
-  const courses = db.courses;
-
+function CoursesList({ courses }) {
   return (
     <>
       <div className="nav-bar mt-3 me-2 d-none d-md-block">
@@ -21,7 +17,9 @@ function CoursesList() {
             >
               <h5>{course.name}</h5>
             </Link>
-            <p>{course.number}, {`${course.startDate} - ${course.endDate}`}</p>
+            <p>
+              {course.number}, {`${course.startDate} - ${course.endDate}`}
+            </p>
           </li>
         ))}
       </ul>
