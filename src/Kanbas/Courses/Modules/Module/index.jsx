@@ -5,18 +5,19 @@ import Lesson from "./Lesson";
 const iconsSize = "20";
 
 function Module({ module }) {
-  const { name, description, lessons } = module;
+  const { description, lessons } = module;
 
   return (
     <div className="wd-module">
       <details open>
         <summary>
-          <ModuleTitle title={name} size={iconsSize} />
+          <ModuleTitle module={module} size={iconsSize} />
         </summary>
         <ModuleDescription description={description} />
-        {lessons && lessons.map((lesson, index) => (
-          <Lesson key={index} lesson={lesson} size={iconsSize} />
-        ))}
+        {lessons &&
+          lessons.map((lesson, index) => (
+            <Lesson key={index} lesson={lesson} size={iconsSize} />
+          ))}
       </details>
     </div>
   );
