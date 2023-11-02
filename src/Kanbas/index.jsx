@@ -38,7 +38,7 @@ function Kanbas() {
         } else {
           return c;
         }
-      })
+      }),
     );
   };
 

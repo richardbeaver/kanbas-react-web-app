@@ -5,9 +5,7 @@ import React from "react";
 
 function AssignmentsListTitle({ iconsSize }) {
   return (
-    <div
-      className="wd-assignment-row bg-secondary d-flex justify-content-between align-items-center">
-
+    <div className="wd-assignment-row bg-secondary d-flex justify-content-between align-items-center">
       <div className="d-flex align-items-center">
         <button className="btn">
           <FaGripVertical className="mb-1" />

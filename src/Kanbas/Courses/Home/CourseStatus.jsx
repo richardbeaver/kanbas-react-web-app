@@ -1,12 +1,13 @@
 import {
-  FaArrowRightToBracket, FaBarsStaggered,
+  FaArrowRightToBracket,
+  FaBarsStaggered,
   FaCircleDot,
-  FaRegCircleXmark
+  FaRegCircleXmark,
 } from "react-icons/fa6";
 import {
   AiFillCalendar,
   AiFillCheckCircle,
-  AiTwotoneCalendar
+  AiTwotoneCalendar,
 } from "react-icons/ai";
 import { FaBullhorn, FaFileImport } from "react-icons/fa";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
@@ -23,7 +24,7 @@ const optionButtons = {
   "View Course Stream": FaBarsStaggered,
   "New Announcement": FaBullhorn,
   "New Analytics": BiSolidBarChartAlt2,
-  "View Course Notifications": BsBell
+  "View Course Notifications": BsBell,
 };
 
 function CourseStatus() {
@@ -31,20 +32,20 @@ function CourseStatus() {
   const currentCourse = db.courses.find((course) => course._id === courseId);
   const courseNumber = currentCourse.number;
 
-  const upcomingEvents = db.upcomingEvents.filter((event) => event.course === courseId);
+  const upcomingEvents = db.upcomingEvents.filter(
+    (event) => event.course === courseId
+  );
 
   return (
     <div className="wd-course-additional-info d-flex flex-column gap-3">
       <h2>Course Status</h2>
 
       <div className="btn-group">
-        <button type="button"
-                className="btn btn-secondary">
+        <button type="button" className="btn btn-secondary">
           <FaRegCircleXmark size={iconsSize} />
           <small>Unpublish</small>
         </button>
-        <button type="button"
-                className="btn btn-success wd-washed-out">
+        <button type="button" className="btn btn-success wd-washed-out">
           <AiFillCheckCircle size={iconsSize} />
           <small>Published</small>
         </button>
@@ -52,9 +53,7 @@ function CourseStatus() {
 
       <div className="btn-toolbar flex-column gap-1">
         {Object.entries(optionButtons).map(([text, Icon], index) => (
-          <button key={index}
-                  type="button"
-                  className="btn btn-secondary">
+          <button key={index} type="button" className="btn btn-secondary">
             <Icon size={iconsSize} />
             <small className="ps-2">{text}</small>
           </button>
@@ -76,12 +75,15 @@ function CourseStatus() {
           {upcomingEvents.map((event) => (
             <li className="list-group-item d-flex flex-column" key={event._id}>
               <AiFillCalendar size={iconsSize} />
-              <Link to="#"
-                    className="fw-bold link-underline link-underline-opacity-0">
+              <Link
+                to="#"
+                className="fw-bold link-underline link-underline-opacity-0"
+              >
                 {event.title}
               </Link>
               <div>
-                <small className="lh-sm">{courseNumber}</small>{" - "}
+                <small className="lh-sm">{courseNumber}</small>
+                {" - "}
                 <small className="lh-sm">{event.time}</small>
               </div>
             </li>
@@ -89,7 +91,7 @@ function CourseStatus() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
 export default CourseStatus;

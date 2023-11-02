@@ -10,7 +10,7 @@ function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
 
   const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId
+    (assignment) => assignment._id === assignmentId,
   );
 
   const navigate = useNavigate();
@@ -22,8 +22,7 @@ function AssignmentEditor() {
   return (
     <div className="assignments-edit-page pb-3">
       <div className="row align-items-center" style={{ height: "50px" }}>
-        <div
-          className="btn-toolbar text-primary justify-content-end align-items-center h-25">
+        <div className="btn-toolbar text-primary justify-content-end align-items-center h-25">
           <AiFillCheckCircle className="wd-icon-success" size={iconsSize} />
           <span className="fw-bold ms-2">Published</span>
           <button type="button" className="btn btn-secondary ms-2">
@@ -39,13 +38,21 @@ function AssignmentEditor() {
           <label htmlFor="input-assignment-name">
             <h2>{assignment.title}</h2>
           </label>
-          <input type="text" id="input-assignment-name" className="form-control"
-                 value={assignment.title} />
+          <input
+            type="text"
+            id="input-assignment-name"
+            className="form-control"
+            value={assignment.title}
+          />
         </div>
 
         <div className="form-group">
-          <textarea className="form-control" id="textarea-bio" rows="5"
-                    placeholder="Description..." />
+          <textarea
+            className="form-control"
+            id="textarea-bio"
+            rows="5"
+            placeholder="Description..."
+          />
         </div>
 
         <div className="form-group row">
@@ -53,8 +60,14 @@ function AssignmentEditor() {
             <label htmlFor="input-points">Points</label>
           </div>
           <div className="col-sm-6">
-            <input type="number" id="input-points" className="form-control"
-                   value="100" max="100" step="5" />
+            <input
+              type="number"
+              id="input-points"
+              className="form-control"
+              value="100"
+              max="100"
+              step="5"
+            />
           </div>
           <div className="col-sm-3"></div>
         </div>
@@ -64,9 +77,11 @@ function AssignmentEditor() {
             <label htmlFor="select-assignment-group">Assignment Group</label>
           </div>
           <div className="col-sm-6">
-            <select id="select-assignment-group"
-                    className="form-select"
-                    aria-label="Select assignment group">
+            <select
+              id="select-assignment-group"
+              className="form-select"
+              aria-label="Select assignment group"
+            >
               <option selected>ASSIGNMENTS</option>
             </select>
           </div>
@@ -78,8 +93,11 @@ function AssignmentEditor() {
             <label htmlFor="select-grade-display">Display Grade As</label>
           </div>
           <div className="col-sm-6">
-            <select id="select-grade-display" className="form-select"
-                    aria-label="Select grade display">
+            <select
+              id="select-grade-display"
+              className="form-select"
+              aria-label="Select grade display"
+            >
               <option selected>Percentage</option>
             </select>
           </div>
@@ -90,10 +108,15 @@ function AssignmentEditor() {
           <div className="col-sm-3"></div>
           <div className="col-sm-6">
             <div className="form-check form-check-inline">
-              <input className="form-check-input" type="checkbox"
-                     id="check-not-count-final" />
-              <label className="form-check-label"
-                     htmlFor="check-not-count-final">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="check-not-count-final"
+              />
+              <label
+                className="form-check-label"
+                htmlFor="check-not-count-final"
+              >
                 Do not count this assignment towards the final grade
               </label>
             </div>
@@ -108,50 +131,85 @@ function AssignmentEditor() {
           <div className="col-sm-6">
             <div className="card">
               <div className="card-body d-grid gap-3">
-                <select className="form-select"
-                        aria-label="Select submission type">
+                <select
+                  className="form-select"
+                  aria-label="Select submission type"
+                >
                   <option selected>Online</option>
                 </select>
 
                 <h5 className="card-title">Online Entry Options</h5>
 
                 <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value=""
-                         id="online-entry-text" checked />
-                  <label className="form-check-label"
-                         htmlFor="online-entry-text">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="online-entry-text"
+                    checked
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="online-entry-text"
+                  >
                     Text Entry
                   </label>
                 </div>
                 <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value=""
-                         id="online-entry-website-url" checked />
-                  <label className="form-check-label"
-                         htmlFor="online-entry-website-url">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="online-entry-website-url"
+                    checked
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="online-entry-website-url"
+                  >
                     Website URL
                   </label>
                 </div>
                 <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value=""
-                         id="online-entry-media-recordings" checked />
-                  <label className="form-check-label"
-                         htmlFor="online-entry-media-recordings">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="online-entry-media-recordings"
+                    checked
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="online-entry-media-recordings"
+                  >
                     Media Recordings
                   </label>
                 </div>
                 <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value=""
-                         id="online-entry-student-annotation" />
-                  <label className="form-check-label"
-                         htmlFor="online-entry-student-annotation">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="online-entry-student-annotation"
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="online-entry-student-annotation"
+                  >
                     Student Annotation
                   </label>
                 </div>
                 <div className="form-check">
-                  <input className="form-check-input" type="checkbox" value=""
-                         id="online-entry-file-uploads" />
-                  <label className="form-check-label"
-                         htmlFor="online-entry-file-uploads">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="online-entry-file-uploads"
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="online-entry-file-uploads"
+                  >
                     File Uploads
                   </label>
                 </div>
@@ -161,7 +219,6 @@ function AssignmentEditor() {
           <div className="col-sm-3"></div>
         </div>
 
-
         <div className="form-group row">
           <div className="col-sm-3 text-sm-end text-nowrap">
             <label htmlFor="">Assign</label>
@@ -169,22 +226,29 @@ function AssignmentEditor() {
 
           <div className="col-sm-6">
             <div className="card">
-
               <div className="card-body d-grid gap-3">
                 <div className="form-group">
                   <label htmlFor="input-assign-to">
                     <h5>Assign to</h5>
                   </label>
-                  <input type="text" data-role="tagsinput" id="input-assign-to"
-                         className="form-control" />
+                  <input
+                    type="text"
+                    data-role="tagsinput"
+                    id="input-assign-to"
+                    className="form-control"
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="input-due-date">
                     <h5>Due</h5>
                   </label>
-                  <input type="datetime-local" id="input-due-date"
-                         className="form-control" value="2023-09-18T23:59" />
+                  <input
+                    type="datetime-local"
+                    id="input-due-date"
+                    className="form-control"
+                    value="2023-09-18T23:59"
+                  />
                 </div>
 
                 <div className="row">
@@ -193,9 +257,12 @@ function AssignmentEditor() {
                       <label htmlFor="input-available-from">
                         <h5>Available from</h5>
                       </label>
-                      <input type="datetime-local" id="input-available-from"
-                             className="form-control"
-                             value="2023-09-06T00:00" />
+                      <input
+                        type="datetime-local"
+                        id="input-available-from"
+                        className="form-control"
+                        value="2023-09-06T00:00"
+                      />
                     </div>
                   </div>
                   <div className="col">
@@ -203,8 +270,11 @@ function AssignmentEditor() {
                       <label htmlFor="input-available-until">
                         <h5>Until</h5>
                       </label>
-                      <input type="datetime-local" id="input-available-until"
-                             className="form-control" />
+                      <input
+                        type="datetime-local"
+                        id="input-available-until"
+                        className="form-control"
+                      />
                     </div>
                   </div>
                 </div>
@@ -214,7 +284,6 @@ function AssignmentEditor() {
                 <i className="fa-solid fa-plus"></i>
                 Add
               </div>
-
             </div>
           </div>
           <div className="col-sm-3"></div>
@@ -225,8 +294,11 @@ function AssignmentEditor() {
         <div className="row">
           <div className="col">
             <div className="form-check form-check-inline">
-              <input className="form-check-input" type="checkbox"
-                     id="inlineCheckbox1" />
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox1"
+              />
               <label className="form-check-label" htmlFor="inlineCheckbox1">
                 Notify users that this content has changed
               </label>
@@ -240,8 +312,10 @@ function AssignmentEditor() {
               >
                 Cancel
               </Link>
-              <button onClick={handleSave}
-                      className="btn btn-primary ms-1 text-white">
+              <button
+                onClick={handleSave}
+                className="btn btn-primary ms-1 text-white"
+              >
                 Save
               </button>
             </div>

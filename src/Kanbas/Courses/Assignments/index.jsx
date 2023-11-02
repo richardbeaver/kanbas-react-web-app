@@ -12,7 +12,7 @@ function Assignments() {
   const assignments = db.assignments;
 
   const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId
+    (assignment) => assignment.course === courseId,
   );
 
   return (
@@ -25,9 +25,11 @@ function Assignments() {
           <summary>
             <AssignmentsListTitle iconsSize={iconsSize} />
           </summary>
-          <AssignmentsList courseId={courseId}
-                           courseAssignments={courseAssignments}
-                           iconsSize={iconsSize} />
+          <AssignmentsList
+            courseId={courseId}
+            courseAssignments={courseAssignments}
+            iconsSize={iconsSize}
+          />
         </details>
       </div>
     </div>

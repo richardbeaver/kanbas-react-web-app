@@ -4,9 +4,7 @@ import { FaEllipsisVertical } from "react-icons/fa6";
 
 function Lesson({ lesson, iconsSize }) {
   return (
-    <div
-      className="wd-module-row d-flex justify-content-between align-items-center"
-    >
+    <div className="wd-module-row d-flex justify-content-between align-items-center">
       <div className="d-flex align-items-center">
         <button className="btn">
           <FaGripVertical className="mb-1" />
@@ -25,7 +23,7 @@ function Lesson({ lesson, iconsSize }) {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 export default Lesson;

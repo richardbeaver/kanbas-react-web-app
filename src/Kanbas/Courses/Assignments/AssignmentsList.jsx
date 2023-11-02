@@ -12,18 +12,13 @@ function AssignmentsList({ courseId, courseAssignments, iconsSize }) {
           to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
           className="list-group-item"
         >
-          <div
-            className="wd-assignment-row d-flex justify-content-between align-items-center"
-          >
+          <div className="wd-assignment-row d-flex justify-content-between align-items-center">
             <div className="d-flex align-items-center">
-              <div className="ps-3">
-                {assignment.title}
-              </div>
+              <div className="ps-3">{assignment.title}</div>
             </div>
 
             <div className="d-flex align-items-center">
-              <AiFillCheckCircle className="wd-icon-success"
-                                 size={iconsSize} />
+              <AiFillCheckCircle className="wd-icon-success" size={iconsSize} />
               <button type="button" className="btn">
                 <FaEllipsisVertical className="mb-1" size={iconsSize} />
               </button>

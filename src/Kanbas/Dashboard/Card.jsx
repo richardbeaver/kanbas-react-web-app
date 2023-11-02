@@ -34,8 +34,7 @@ function Card({ course }) {
       </Link>
 
       {/* Added "5%" to Bootstrap $position-values Sass map to use here */}
-      <div
-        className="btn-toolbar justify-content-end position-absolute top-5 end-5">
+      <div className="btn-toolbar justify-content-end position-absolute top-5 end-5">
         <button className="btn">
           <FaEllipsisVertical style={{ color: "white" }} />
         </button>
