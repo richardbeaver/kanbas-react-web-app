@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-function CoursesList({ courses }) {
+function CoursesList() {
+  const courses = useSelector((state) => state.coursesReducer.courses);
+
   return (
     <>
       <div className="nav-bar mt-3 me-2 d-none d-md-block">

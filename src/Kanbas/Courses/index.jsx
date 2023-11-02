@@ -7,12 +7,14 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import CoursesNavBar from "./CoursesNavBar";
+import { useSelector } from "react-redux";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const page = pathname.split("/").at(-1);
 
+  const courses = useSelector((state) => state.coursesReducer.courses);
   const course = courses.find((course) => course._id === courseId);
 
   return (

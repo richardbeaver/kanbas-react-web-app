@@ -14,6 +14,7 @@ import { BiSolidBarChartAlt2 } from "react-icons/bi";
 import { BsBell } from "react-icons/bs";
 import db from "../../Database";
 import { Link, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const iconsSize = "20";
 
@@ -29,7 +30,8 @@ const optionButtons = {
 
 function CourseStatus() {
   const { courseId } = useParams();
-  const currentCourse = db.courses.find((course) => course._id === courseId);
+  const courses = useSelector((state) => state.coursesReducer.courses);
+  const currentCourse = courses.find((course) => course._id === courseId);
   const courseNumber = currentCourse.number;
 
   const upcomingEvents = db.upcomingEvents.filter(
