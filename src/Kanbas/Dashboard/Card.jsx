@@ -13,7 +13,7 @@ function Card({ course }) {
   const backgroundColor = chooseCardBackground();
 
   return (
-    <div className="position-relative p-2">
+    <div className="position-relative">
       <Link
         to={`/Kanbas/Courses/${course._id}`}
         className="text-decoration-none"
