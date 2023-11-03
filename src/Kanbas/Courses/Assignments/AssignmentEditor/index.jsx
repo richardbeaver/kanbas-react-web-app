@@ -1,21 +1,46 @@
 import React from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
 import db from "../../../Database";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaEllipsisVertical } from "react-icons/fa6";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  selectAssignment,
+} from "../assignmentsReducer";
 
 const iconsSize = "20";
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId,
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
   );
 
-  const navigate = useNavigate();
+  // Either create and edit a new assignment or find the assignment we're
+  // trying to edit from our store
+  let assignment;
+  if (assignmentId === "new") {
+    assignment = {
+      _id: new Date().getTime().toString(),
+      title: "New Assignment",
+      course: courseId,
+    };
+  } else {
+    assignment = assignments.find(
+      (assignment) => assignment._id === assignmentId
+    );
+  }
+
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+    dispatch(addAssignment(assignment));
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
+
+  const handleCancel = () => {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
 
@@ -43,6 +68,14 @@ function AssignmentEditor() {
             id="input-assignment-name"
             className="form-control"
             value={assignment.title}
+            onChange={(e) =>
+              dispatch(
+                selectAssignment({
+                  ...assignment,
+                  title: e.target.value,
+                })
+              )
+            }
           />
         </div>
 
@@ -306,13 +339,15 @@ function AssignmentEditor() {
           </div>
           <div className="col">
             <div className="btn-toolbar justify-content-end">
-              <Link
-                to={`/Kanbas/Courses/${courseId}/Assignments`}
+              <button
+                type="button"
+                onClick={handleCancel}
                 className="btn btn-secondary"
               >
                 Cancel
-              </Link>
+              </button>
               <button
+                type="submit"
                 onClick={handleSave}
                 className="btn btn-primary ms-1 text-white"
               >

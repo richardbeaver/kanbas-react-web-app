@@ -31,18 +31,20 @@ function ModuleList() {
             }
           />
         </div>
-        <button
-          className="btn btn-success"
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
-        >
-          Add
-        </button>
-        <button
-          className="btn btn-secondary"
-          onClick={() => dispatch(updateModule(module))}
-        >
-          Update
-        </button>
+        <div className="d-flex gap-1">
+          <button
+            className="btn btn-success"
+            onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-secondary"
+            onClick={() => dispatch(updateModule(module))}
+          >
+            Update
+          </button>
+        </div>
       </form>
 
       {modules
