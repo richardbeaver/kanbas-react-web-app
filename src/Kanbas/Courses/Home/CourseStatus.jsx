@@ -12,9 +12,9 @@ import {
 import { FaBullhorn, FaFileImport } from "react-icons/fa";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
 import { BsBell } from "react-icons/bs";
-import db from "../../Database";
 import { Link, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import * as client from "../../Courses/client";
 
 const iconsSize = "20";
 
@@ -30,13 +30,24 @@ const optionButtons = {
 
 function CourseStatus() {
   const { courseId } = useParams();
-  const courses = useSelector((state) => state.coursesReducer.courses);
-  const currentCourse = courses.find((course) => course._id === courseId);
-  const courseNumber = currentCourse.number;
 
-  const upcomingEvents = db.upcomingEvents.filter(
-    (event) => event.course === courseId
-  );
+  const [course, setCourse] = useState(null);
+  const [upcomingEvents, setUpcomingEvents] = useState(null);
+
+  const fetchCourseById = async () => {
+    const course = await client.fetchCourse(courseId);
+    setCourse(course);
+  };
+
+  const fetchNextThreeEvents = async () => {
+    const events = await client.fetchEventsForCourse(courseId);
+    setUpcomingEvents(events.slice(0, 3));
+  };
+
+  useEffect(() => {
+    fetchCourseById();
+    fetchNextThreeEvents();
+  }, [courseId]);
 
   return (
     <div className="wd-course-additional-info d-flex flex-column gap-3">
@@ -74,22 +85,27 @@ function CourseStatus() {
         </div>
 
         <ul className="list-group">
-          {upcomingEvents.map((event) => (
-            <li className="list-group-item d-flex flex-column" key={event._id}>
-              <AiFillCalendar size={iconsSize} />
-              <Link
-                to="#"
-                className="fw-bold link-underline link-underline-opacity-0"
+          {course &&
+            upcomingEvents &&
+            upcomingEvents.map((event) => (
+              <li
+                className="list-group-item d-flex flex-column"
+                key={event._id}
               >
-                {event.title}
-              </Link>
-              <div>
-                <small className="lh-sm">{courseNumber}</small>
-                {" - "}
-                <small className="lh-sm">{event.time}</small>
-              </div>
-            </li>
-          ))}
+                <AiFillCalendar size={iconsSize} />
+                <Link
+                  to="#"
+                  className="fw-bold link-underline link-underline-opacity-0"
+                >
+                  {event.title}
+                </Link>
+                <div>
+                  <small className="lh-sm">{course.number}</small>
+                  {" - "}
+                  <small className="lh-sm">{event.time}</small>
+                </div>
+              </li>
+            ))}
         </ul>
       </div>
     </div>

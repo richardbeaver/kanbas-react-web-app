@@ -1,18 +1,43 @@
+import { useState, useEffect } from "react";
 import Card from "./Card";
 import "./index.css";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  setCourse,
-  deleteCourse,
-  updateCourse,
-  addCourse,
-} from "./coursesReducer";
+import * as client from "../Courses/client";
 
 function Dashboard() {
-  const courses = useSelector((state) => state.coursesReducer.courses);
-  const course = useSelector((state) => state.coursesReducer.course);
+  const [courses, setCourses] = useState([]);
+  const [course, setCourse] = useState({});
 
-  const dispatch = useDispatch();
+  const fetchCourses = async () => {
+    const courses = await client.fetchCourses();
+    setCourses(courses);
+  };
+
+  const deleteCourse = async (id) => {
+    try {
+      await client.deleteCourse(id);
+      setCourses(courses.filter((course) => course._id !== id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateCourse = async () => {
+    try {
+      await client.updateCourse(course);
+      setCourses(courses.map((c) => (c._id === course._id ? course : c)));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addCourse = async () => {
+    const newCourse = await client.addCourse(course);
+    setCourses([newCourse, ...courses]);
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
 
   return (
     <div className="wd-dashboard">
@@ -29,72 +54,52 @@ function Dashboard() {
         <input
           value={course.name}
           className="form-control"
-          onChange={(e) =>
-            dispatch(setCourse({ ...course, name: e.target.value }))
-          }
+          onChange={(e) => setCourse({ ...course, name: e.target.value })}
         />
         <input
           value={course.number}
           className="form-control"
-          onChange={(e) =>
-            dispatch(setCourse({ ...course, number: e.target.value }))
-          }
+          onChange={(e) => setCourse({ ...course, number: e.target.value })}
         />
         <input
           value={course.startDate}
           className="form-control"
           type="date"
-          onChange={(e) =>
-            dispatch(setCourse({ ...course, startDate: e.target.value }))
-          }
+          onChange={(e) => setCourse({ ...course, startDate: e.target.value })}
         />
         <input
           value={course.endDate}
           className="form-control"
           type="date"
-          onChange={(e) =>
-            dispatch(setCourse({ ...course, endDate: e.target.value }))
-          }
+          onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
         />
 
         <div className="d-flex gap-2">
-          <button
-            className="btn btn-primary"
-            onClick={() => dispatch(addCourse(course))}
-          >
+          <button className="btn btn-primary" onClick={addCourse}>
             Add
           </button>
-          <button
-            className="btn btn-info"
-            onClick={() => dispatch(updateCourse(course))}
-          >
+          <button className="btn btn-info" onClick={updateCourse}>
             Update
           </button>
         </div>
       </form>
 
       <div className="d-flex flex-wrap p-2 gap-3">
-        {courses.map((course) => (
-          <div className="d-flex flex-column">
-            <Card key={course._id} course={course} />
+        {courses.map((course, index) => (
+          <div className="d-flex flex-column" key={index}>
+            <Card course={course} />
 
             <div className="d-flex gap-2 p-1">
               <button
                 className="btn btn-secondary"
-                onClick={(event) => {
-                  event.preventDefault();
-                  dispatch(setCourse(course));
-                }}
+                onClick={() => setCourse(course)}
               >
                 Edit
               </button>
 
               <button
                 className="btn btn-danger"
-                onClick={(event) => {
-                  event.preventDefault();
-                  dispatch(deleteCourse(course._id));
-                }}
+                onClick={() => deleteCourse(course._id)}
               >
                 Delete
               </button>

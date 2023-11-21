@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
@@ -7,19 +8,27 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import CoursesNavBar from "./CoursesNavBar";
-import { useSelector } from "react-redux";
+import * as client from "../Courses/client";
 
 function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const page = pathname.split("/").at(-1);
 
-  const courses = useSelector((state) => state.coursesReducer.courses);
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState(null);
+
+  const fetchCourseById = async () => {
+    const course = await client.fetchCourse(courseId);
+    setCourse(course);
+  };
+
+  useEffect(() => {
+    fetchCourseById();
+  }, [courseId]);
 
   return (
     <>
-      <CoursesNavBar course={course} page={page} />
+      {course && <CoursesNavBar course={course} page={page} />}
       <hr />
 
       <div className="d-flex">

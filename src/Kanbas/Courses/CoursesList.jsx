@@ -1,8 +1,18 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import * as client from "../Courses/client";
 
 function CoursesList() {
-  const courses = useSelector((state) => state.coursesReducer.courses);
+  const [courses, setCourses] = useState(null);
+
+  const fetchCourses = async () => {
+    const courses = await client.fetchCourses();
+    setCourses(courses);
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
 
   return (
     <>
@@ -12,19 +22,20 @@ function CoursesList() {
       <hr />
 
       <ul className="list-group">
-        {courses.map((course, index) => (
-          <li key={index} className="list-group-item">
-            <Link
-              to={`/Kanbas/Courses/${course._id}`}
-              className="text-decoration-none"
-            >
-              <h5>{course.name}</h5>
-            </Link>
-            <p>
-              {course.number}, {`${course.startDate} - ${course.endDate}`}
-            </p>
-          </li>
-        ))}
+        {courses &&
+          courses.map((course, index) => (
+            <li key={index} className="list-group-item">
+              <Link
+                to={`/Kanbas/Courses/${course._id}`}
+                className="text-decoration-none"
+              >
+                <h5>{course.name}</h5>
+              </Link>
+              <p>
+                {course.number}, {`${course.startDate} - ${course.endDate}`}
+              </p>
+            </li>
+          ))}
       </ul>
     </>
   );
