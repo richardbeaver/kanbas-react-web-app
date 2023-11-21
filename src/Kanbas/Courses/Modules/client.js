@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const COURSES_URL = "http://localhost:4000/api/courses";
-const MODULES_URL = "http://localhost:4000/api/modules";
+const REACT_APP_API_BASE = process.env.REACT_APP_API_BASE;
+
+const COURSES_URL = REACT_APP_API_BASE + "/courses";
+const MODULES_URL = REACT_APP_API_BASE + "/modules";
 
 export const createModule = async (courseId, module) => {
   const response = await axios.post(
