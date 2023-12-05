@@ -24,6 +24,9 @@ function Nav() {
       <Link to="/Kanbas" className={`nav-link ${activeClass("Kanbas")}`}>
         Kanbas
       </Link>
+      <Link to="/project" className={`nav-link ${activeClass("Project")}`}>
+        Project
+      </Link>
     </nav>
   );
 }

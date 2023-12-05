@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const REACT_APP_API_BASE = process.env.REACT_APP_API_BASE;
+const REACT_APP_API_BASE =
+  process.env.REACT_APP_API_BASE || "http://localhost:4000/api";
 const COURSES_URL = REACT_APP_API_BASE + "/courses";
 
 export const fetchCourses = async () => {
