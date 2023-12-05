@@ -7,12 +7,18 @@ function Search() {
   const { search } = useParams();
   const [searchTerm, setSearchTerm] = useState(search || "beatles");
   const [results, setResults] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+
   const navigate = useNavigate();
 
   const fetchAlbums = async (search) => {
-    const results = await client.findAlbums(search);
-    setResults(results);
-    setSearchTerm(search);
+    try {
+      const results = await client.findAlbums(search);
+      setResults(results);
+      setSearchTerm(search);
+    } catch (e) {
+      setErrorMessage(e.message);
+    }
   };
 
   useEffect(() => {
@@ -23,6 +29,11 @@ function Search() {
 
   return (
     <div>
+      {errorMessage && (
+        <div className="alert alert-danger" role="alert">
+          {errorMessage}
+        </div>
+      )}
       <h1>Search</h1>
       <button
         onClick={() => navigate(`/project/search/${searchTerm}`)}
