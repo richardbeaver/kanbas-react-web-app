@@ -6,6 +6,7 @@ import { setCurrentUser } from "./reducer";
 function CurrentUser({ children }) {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
+  
   const fetchCurrentUser = async () => {
     const user = await client.account();
     dispatch(setCurrentUser(user));
