@@ -41,12 +41,14 @@ function Account() {
           <input
             type="text"
             className="form-control"
+            placeholder="First name"
             value={user.firstName}
             onChange={(e) => setUser({ ...user, firstName: e.target.value })}
           />
           <input
             type="text"
             className="form-control"
+            placeholder="Last name"
             value={user.lastName}
             onChange={(e) => setUser({ ...user, lastName: e.target.value })}
           />

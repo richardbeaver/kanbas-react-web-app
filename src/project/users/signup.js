@@ -15,8 +15,13 @@ function Signup() {
 
   const signUp = async () => {
     try {
-      const user = client.signup({ email, username, password });
-      signIn();
+      client.signup({ email, username, password });
+
+      const credentials = { username, password };
+      const user = await client.signin(credentials);
+
+      dispatch(setCurrentUser(user));
+      navigate("/project/account");
     } catch (error) {
       setError(error);
     }
