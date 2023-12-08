@@ -1,20 +1,30 @@
-import * as client from "./client";
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import * as client from "./client.js";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCurrentUser } from "./reducer";
 
-function SignIn() {
+function Signup() {
+  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const signUp = async () => {
+    try {
+      const user = client.signup({ email, username, password });
+      signIn();
+    } catch (error) {
+      setError(error);
+    }
+  };
 
   const signIn = async () => {
     try {
-      const credentials = { username: username, password: password };
+      const credentials = { username, password };
       const user = await client.signin(credentials);
       dispatch(setCurrentUser(user));
       navigate("/project/account");
@@ -25,8 +35,17 @@ function SignIn() {
 
   return (
     <div>
-      <h2>Sign In</h2>
+      <h2>Sign Up</h2>
+
       {error && <div className="alert alert-danger">{error.message}</div>}
+
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
       <input
         type="text"
         className="form-control"
@@ -41,11 +60,11 @@ function SignIn() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={signIn} className="btn btn-primary">
-        Sign In
+      <button onClick={signUp} className="btn btn-primary">
+        Sign Up
       </button>
     </div>
   );
 }
 
-export default SignIn;
+export default Signup;

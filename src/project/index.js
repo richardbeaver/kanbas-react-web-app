@@ -1,6 +1,6 @@
 import Home from "./home";
 import Login from "./login";
-import Signup from "./signup";
+import Signup from "./users/signup";
 import Profile from "./profile";
 import Search from "./search";
 import Details from "./details";

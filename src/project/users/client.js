@@ -7,6 +7,13 @@ const request = axios.create({
 const API_BASE = process.env.REACT_APP_BASE_API_URL; // || "http://localhost:4000";
 const USERS_API = `${API_BASE}/api/users`;
 
+export const signup = async (newUser) => {
+  console.log({ newUser });
+  const response = await request.post(`${USERS_API}`, newUser);
+  console.log(`${USERS_API}`);
+  return response.data;
+};
+
 export const signin = async (credentials) => {
   const response = await request.post(`${USERS_API}/signin`, credentials);
   return response.data;
